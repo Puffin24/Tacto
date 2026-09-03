@@ -1628,15 +1628,32 @@ function setLang(lang) {
   }
 })();
 
-// Patch handlePresupForm to use current language
-const _origForm = window.handlePresupForm;
+// Patch handlePresupForm — envio real via Formspree
 window.handlePresupForm = function(e) {
   e.preventDefault();
   const btn = document.getElementById('presup-btn');
   const lang = document.documentElement.lang || 'es';
-  btn.innerHTML = (T[lang] && T[lang]['form-sent']) || T['es']['form-sent'];
-  btn.classList.add('sent');
+  const okMsg = (T[lang] && T[lang]['form-sent']) || T['es']['form-sent'];
+  const prev = btn.innerHTML;
+  const fail = function(msg){ btn.disabled = false; btn.innerHTML = prev; alert(msg); };
   btn.disabled = true;
+  btn.innerHTML = '\u2026';
+  fetch('https://formspree.io/f/xoeqwzdw', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      Nombre: (document.getElementById('pf-name') || {}).value || '',
+      Telefono: (document.getElementById('pf-phone') || {}).value || '',
+      'Tipo de reforma': (document.getElementById('pf-type') || {}).value || '',
+      Mensaje: (document.getElementById('pf-msg') || {}).value || '',
+      _subject: 'Nueva solicitud de presupuesto \u2014 tactoreformas.com'
+    })
+  }).then(function(r){
+    if (r.ok) { btn.innerHTML = okMsg; btn.classList.add('sent'); }
+    else { fail('No se pudo enviar. Escribenos a info@tactoreformas.com'); }
+  }).catch(function(){
+    fail('Error de conexion. Escribenos a info@tactoreformas.com');
+  });
 };
 </script>
 
