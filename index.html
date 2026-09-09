@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<title>Tacto · Reformas con Carácter</title>
+<meta name="description" content="Tacto: empresa de reformas integrales con carácter. Especialistas en baños, cocinas, microcemento, iluminación y domótica. Presupuesto gratuito sin compromiso.">
+<meta name="keywords" content="reformas integrales, empresa de reformas, reforma baño, reforma cocina, microcemento, iluminación, domótica, reforma integral vivienda">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap">
+
+<style>
+/* ─── Tokens ─── */
+:root {
+  --sand:      #F2EBE0;
+  --sand-mid:  #E4D9CC;
+  --concrete:  #C8BAA8;
+  --terra:     #C0512E;
+  --forest:    #2A4A2E;
+  --dark:      #1C1915;
+  --mid:       #7A6B5A;
+  --bg:        #F2EBE0;
+  --fg:        #1C1915;
+}
+/* dark mode désactivé — palette beige forcée */
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; color-scheme: light; }
+body { background: var(--bg); color: var(--fg); font-family: 'Newsreader', Georgia, serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── Header ─── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  padding: 1.6rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg);
+  border-bottom: 1px solid var(--concrete);
+}
+.logo-group { display: flex; flex-direction: column; gap: 0.18rem; }
+.logo { color: var(--fg); text-decoration: none; display: flex; align-items: center; }
+.logo-claim { font-size: 0.57rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mid); font-family: 'Bricolage Grotesque', sans-serif; padding-left: 0; }
+nav { display: flex; gap: 2.5rem; }
+nav a {
+  font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; color: var(--mid); transition: color 0.2s;
+  padding-bottom: 2px; border-bottom: 1px solid transparent;
+}
+nav a:hover { color: var(--fg); }
+nav a.active { color: var(--fg); border-bottom-color: var(--terra); }
+
+/* ─── Section wrapper ─── */
+.portfolio-section { padding-bottom: 6rem; }
+
+/* ─── Section divider ─── */
+.section-header {
+  padding: 4rem 3rem 2.5rem;
+  display: flex; align-items: baseline; gap: 2rem;
+}
+.section-number {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.85rem;
+  color: var(--terra); letter-spacing: 0.05em;
+}
+.section-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300; font-style: normal;
+  color: var(--fg); letter-spacing: -0.01em;
+}
+.section-rule { flex: 1; height: 1px; background: var(--concrete); }
+
+/* ════════════════════════════════
+   SECTION 1 — BÉTON CIRÉ
+   ════════════════════════════════ */
+
+.bc-hero {
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh;
+}
+.bc-hero-img { overflow: hidden; }
+.bc-hero-img img { height: 100%; transition: transform 0.8s ease; }
+.bc-hero-img:hover img { transform: scale(1.03); }
+.bc-hero-text {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 4rem 3.5rem 4rem 3rem; background: var(--sand);
+}
+.hero-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: none; }
+.hero-side-bar {
+  width: 2px; height: 52px;
+  background: var(--terra);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+}
+.hero-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  font-weight: 300; font-style: normal;
+  line-height: 1.0; text-wrap: balance; color: var(--fg); margin-bottom: 1.8rem;
+}
+.hero-title em { font-style: normal; color: var(--terra); }
+.hero-desc {
+  font-size: 0.87rem; line-height: 1.78; color: var(--mid);
+  max-width: 38ch; margin-bottom: 2.5rem;
+}
+.hero-meta {
+  display: flex; gap: 2.5rem;
+  padding-top: 2rem; border-top: 1px solid var(--concrete);
+}
+.meta-item label {
+  display: block; font-size: 0.6rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: 0.3rem;
+}
+.meta-item span {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.95rem;
+  font-weight: 600; color: var(--fg);
+}
+
+.bc-grid {
+  display: grid; grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: 460px 340px;
+  gap: 2px; margin: 2rem 0 0; padding: 0 3rem;
+}
+.grid-item {
+  overflow: hidden; position: relative; background: var(--sand-mid);
+}
+.grid-item img { transition: transform 0.7s ease; }
+.grid-item:hover img { transform: scale(1.04); }
+.grid-item.tall { grid-row: span 2; }
+.caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 1.5rem 1.4rem 1.2rem;
+  background: linear-gradient(to top, rgba(28,25,21,0.72) 0%, transparent 100%);
+  color: #EDE6DB; opacity: 0; transition: opacity 0.3s;
+}
+.grid-item:hover .caption { opacity: 1; }
+.caption p { font-size: 0.75rem; letter-spacing: 0.07em; line-height: 1.5; }
+
+.bc-statement {
+  margin: 4rem 3rem 0; padding: 3.5rem 3rem;
+  background: var(--sand-mid);
+  display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;
+}
+.statement-left {
+  border-right: 1px solid var(--concrete); padding-right: 3rem;
+}
+.statement-left p {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.2rem; font-weight: 300; font-style: normal;
+  line-height: 1.2; color: var(--fg); text-wrap: balance;
+}
+.statement-right {
+  font-size: 0.87rem; line-height: 1.85; color: var(--mid); max-width: 52ch;
+}
+
+/* ════════════════════════════════
+   SECTION 2 — DOUCHES
+   ════════════════════════════════ */
+
+.shower-hero {
+  display: grid; grid-template-columns: 1.3fr 0.7fr; min-height: 76vh; gap: 2px;
+  padding: 0 3rem;
+}
+.shower-hero-main { overflow: hidden; position: relative; }
+.shower-hero-main img { height: 100%; transition: transform 0.8s ease; }
+.shower-hero-main:hover img { transform: scale(1.03); }
+.shower-hero-side {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 3rem; background: var(--sand);
+  position: relative;
+}
+.shower-hero-side::before { content: none; }
+.shower-side-bar {
+  width: 2px; height: 52px;
+  background: var(--terra);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+}
+.shower-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.shower-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300; line-height: 1.1; text-wrap: balance;
+  color: var(--fg); margin-bottom: 1.5rem;
+}
+.shower-desc {
+  font-size: 0.87rem; line-height: 1.78; color: var(--mid); max-width: 34ch;
+  margin-bottom: 2.5rem;
+}
+.shower-tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.tag {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.4rem 0.9rem; border: 1px solid var(--concrete);
+  color: var(--mid);
+}
+
+.shower-duo {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; height: 420px;
+  margin: 2px 3rem 0;
+}
+.shower-duo-item { overflow: hidden; position: relative; }
+.shower-duo-item img { transition: transform 0.7s ease; }
+.shower-duo-item:hover img { transform: scale(1.04); }
+.shower-duo-item .caption { opacity: 0; transition: opacity 0.3s; }
+.shower-duo-item:hover .caption { opacity: 1; }
+
+.shower-note {
+  margin: 3rem 3rem 0; padding: 2rem 2.5rem;
+  border-left: 3px solid var(--terra);
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic; font-size: 0.9rem; line-height: 1.75; color: var(--mid);
+  max-width: 60ch;
+}
+
+/* ════════════════════════════════
+   SECTION 3 — RÉNOVATIONS (placeholder)
+   ════════════════════════════════ */
+.reno-placeholder {
+  margin: 0 3rem;
+  height: 320px;
+  background: var(--sand-mid);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 1rem;
+  border: 1px dashed var(--concrete);
+}
+.reno-placeholder p {
+  font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mid);
+}
+.reno-placeholder span {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.8rem; font-style: italic; color: var(--concrete);
+}
+
+
+/* ─── Section II extra (trio) ─── */
+.shower-trio {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px; height: 480px;
+  margin: 2px 3rem 0;
+}
+.shower-trio-item { overflow: hidden; position: relative; background: var(--sand-mid); }
+.shower-trio-item img { transition: transform 0.7s ease; }
+.shower-trio-item:hover img { transform: scale(1.04); }
+.shower-trio-item .caption { opacity: 0; transition: opacity 0.3s; }
+.shower-trio-item:hover .caption { opacity: 1; }
+
+/* ─── Section III — Rénovations ─── */
+.reno-hero {
+  display: grid; grid-template-columns: 1.3fr 0.7fr; min-height: 76vh; gap: 2px;
+  padding: 0 3rem;
+}
+.reno-hero-main { overflow: hidden; position: relative; }
+.reno-hero-main img { height: 100%; transition: transform 0.8s ease; }
+.reno-hero-main:hover img { transform: scale(1.03); }
+.reno-hero-text {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 3rem; background: var(--sand);
+  position: relative;
+}
+.reno-hero-text::before { content: none; }
+.reno-side-bar {
+  width: 2px; height: 52px;
+  background: var(--terra);
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+}
+.reno-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.reno-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300; line-height: 1.1; text-wrap: balance;
+  color: var(--fg); margin-bottom: 1.5rem;
+}
+.reno-desc {
+  font-size: 0.87rem; line-height: 1.78; color: var(--mid); max-width: 34ch;
+  margin-bottom: 2.5rem;
+}
+.reno-detail {
+  margin: 2px 3rem 0; height: 440px;
+  overflow: hidden; position: relative;
+}
+.reno-detail img { transition: transform 0.8s ease; }
+.reno-detail:hover img { transform: scale(1.03); }
+.reno-note {
+  margin: 3rem 3rem 0; padding: 2rem 2.5rem;
+  border-left: 3px solid var(--terra);
+  font-style: italic; font-size: 0.9rem; line-height: 1.75; color: var(--mid);
+  max-width: 60ch;
+}
+
+/* ─── Section Qué Hacemos ─── */
+.qh-section {
+  padding: 6rem 3rem 5rem;
+  background: var(--sand-mid);
+}
+.qh-header {
+  margin-bottom: 4.5rem;
+}
+.qh-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.2rem; display: block;
+}
+.qh-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 300; font-style: normal;
+  color: var(--fg); margin-bottom: 0; line-height: 1.05;
+}
+.qh-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1px; background: var(--concrete);
+}
+.qh-card {
+  padding: 3rem 2.5rem 3.5rem;
+  background: var(--sand-mid);
+  position: relative;
+}
+.qh-card::before {
+  content: ''; display: block;
+  width: 2rem; height: 2px;
+  background: var(--terra);
+  margin-bottom: 2.5rem;
+}
+.qh-card-num {
+  position: absolute; top: 3rem; right: 2.5rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.75rem; color: var(--concrete);
+  letter-spacing: 0.05em;
+}
+.qh-card-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.55rem; font-weight: 400; font-style: italic;
+  color: var(--fg); margin-bottom: 1.4rem; line-height: 1.1;
+}
+.qh-card-desc {
+  font-size: 0.82rem; line-height: 1.82;
+  color: var(--mid);
+}
+
+/* ─── Quiénes somos ─── */
+.qs-section { padding: 6rem 3rem; }
+.qs-inner { display: grid; grid-template-columns: 1fr 1.65fr; gap: 6rem; align-items: start; }
+.qs-label {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 2.2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.qs-label::before { content: ''; width: 2rem; height: 1px; background: var(--terra); flex-shrink: 0; }
+.qs-headline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 300; font-style: normal;
+  line-height: 1.22; color: var(--fg); text-wrap: balance;
+}
+.qs-body p { font-size: 0.89rem; line-height: 1.92; color: var(--mid); margin-bottom: 1.6rem; }
+.qs-body p:last-child { margin-bottom: 0; }
+.qs-body em { font-style: normal; color: var(--fg); font-weight: 500; }
+
+/* ─── FAQ ─── */
+.faq-section { padding: 5rem 3rem; background: var(--sand-mid); }
+.faq-header { margin-bottom: 3.5rem; }
+.faq-list { max-width: 80ch; }
+.faq-item { border-top: 1px solid var(--concrete); }
+.faq-item:last-child { border-bottom: 1px solid var(--concrete); }
+.faq-q {
+  width: 100%; background: none; border: none; text-align: left;
+  padding: 1.75rem 0; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 2rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1rem; font-weight: 400; color: var(--fg); line-height: 1.3;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--terra); }
+.faq-icon {
+  flex-shrink: 0; width: 1.6rem; height: 1.6rem;
+  border-radius: 50%; border: 1px solid var(--concrete);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; line-height: 1; color: var(--mid);
+  transition: transform 0.3s, color 0.2s, border-color 0.2s;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--terra); border-color: var(--terra); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s ease; }
+.faq-item.open .faq-a { max-height: 1200px; }
+.faq-a-inner { padding: 0 4rem 2rem 0; font-size: 0.86rem; line-height: 1.88; color: var(--mid); }
+
+/* ─── Contacto ─── */
+.contact-section {
+  background: var(--sand); padding: 6rem 3rem; border-top: 1px solid var(--concrete);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+.contact-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 300; font-style: normal;
+  color: var(--fg); line-height: 1.05; margin-bottom: 1.2rem;
+}
+.contact-sub { font-size: 0.84rem; color: rgba(237,230,219,0.5); line-height: 1.75; max-width: 36ch; }
+.contact-right { display: flex; flex-direction: column; gap: 2rem; }
+.contact-phone {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.6rem; font-weight: 400; color: var(--fg); letter-spacing: 0.04em;
+}
+.contact-wa-btn {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  padding: 1.1rem 2.2rem; background: #25D366; color: #fff;
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; transition: background 0.2s; align-self: flex-start;
+}
+.contact-wa-btn:hover { background: #1ebd5a; }
+.contact-wa-btn svg { flex-shrink: 0; }
+.contact-langs { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(200,186,168,0.4); }
+
+/* ─── Reno aside (Carpintería detail) ─── */
+.reno-aside {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; padding: 4rem 3rem 0; align-items: start;
+}
+.reno-aside-text {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.reno-aside-img {
+  height: 560px; overflow: hidden; position: relative; background: var(--sand-mid);
+}
+.reno-aside-img img { transition: transform 0.8s ease; }
+.reno-aside-img:hover img { transform: scale(1.04); }
+.reno-aside-img .caption { opacity: 0; transition: opacity 0.3s; }
+.reno-aside-img:hover .caption { opacity: 1; }
+.reno-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--concrete);
+}
+.reno-list li {
+  display: flex; align-items: baseline; gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--concrete);
+  font-size: 0.85rem; line-height: 1.55; color: var(--mid);
+}
+.reno-list li::before {
+  content: '';
+  display: inline-block;
+  width: 16px; height: 1px;
+  background: var(--terra);
+  flex-shrink: 0;
+  margin-top: 0.5em;
+}
+.reno-note-inline {
+  font-style: italic; font-size: 0.9rem; line-height: 1.82; color: var(--mid);
+}
+.reno-note-inline::before {
+  content: ''; display: block; width: 2rem; height: 2px;
+  background: var(--terra); margin-bottom: 2rem;
+}
+/* ─── Footer ─── */
+footer {
+  margin: 5rem 3rem 0; padding: 2rem 0;
+  border-top: 1px solid var(--concrete);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid);
+}
+
+
+/* ─── Presupuesto Hero ─── */
+.presup-section {
+  background: var(--sand);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.presup-section::before {
+  content: 'T';
+  position: absolute; right: -0.05em; top: -0.15em;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 52vw; font-weight: 600; line-height: 1;
+  color: rgba(28,25,21,0.04);
+  pointer-events: none; user-select: none;
+  letter-spacing: -0.05em;
+}
+.presup-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; align-items: stretch;
+  position: relative; z-index: 1;
+}
+.presup-text {
+  padding: 6rem 4rem 6rem 3rem;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--concrete);
+}
+.presup-eyebrow {
+  font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 2rem; display: flex;
+  align-items: center; gap: 1rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.presup-eyebrow::before {
+  content: ''; width: 2rem; height: 1px; background: var(--terra); flex-shrink: 0;
+}
+.presup-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 300; line-height: 1.0; color: var(--fg);
+  margin-bottom: 2rem; text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+.presup-title em { font-style: italic; color: var(--terra); font-weight: 400; }
+.presup-desc {
+  font-size: 0.88rem; line-height: 1.88; color: var(--mid);
+  margin-bottom: 2.5rem; max-width: 40ch;
+}
+.presup-desc strong { color: var(--fg); font-weight: 400; }
+.presup-stats {
+  display: flex; gap: 2.5rem; margin-bottom: 2.5rem;
+  padding-top: 2rem; border-top: 1px solid var(--concrete);
+}
+.presup-stat-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem; font-weight: 300; color: var(--fg); line-height: 1;
+  letter-spacing: -0.02em; display: block;
+}
+.presup-stat-label {
+  font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mid); display: block; margin-top: 0.4rem;
+}
+.presup-bullets {
+  list-style: none; display: flex; flex-direction: column; gap: 0.65rem;
+}
+.presup-bullets li {
+  font-size: 0.79rem; color: var(--mid); letter-spacing: 0.03em;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.presup-bullets li::before {
+  content: ''; width: 1rem; height: 1px; background: var(--terra); flex-shrink: 0;
+}
+.presup-form {
+  background: var(--sand);
+  padding: 3rem; display: flex; flex-direction: column; gap: 1.25rem;
+}
+.presup-form-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.15rem; font-weight: 500; color: var(--fg); margin-bottom: 0.3rem;
+}
+.presup-field { display: flex; flex-direction: column; gap: 0.45rem; }
+.presup-field label {
+  font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mid); font-family: 'Bricolage Grotesque', sans-serif;
+}
+.presup-field input,
+.presup-field select,
+.presup-field textarea {
+  background: var(--bg); border: 1px solid var(--concrete);
+  padding: 0.8rem 1rem; font-size: 0.87rem; color: var(--fg);
+  font-family: 'Newsreader', Georgia, serif;
+  outline: none; transition: border-color 0.2s; resize: none;
+  -webkit-appearance: none; appearance: none; border-radius: 0;
+}
+.presup-field input:focus,
+.presup-field select:focus,
+.presup-field textarea:focus { border-color: var(--terra); }
+.presup-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A6B5A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+.presup-btn {
+  background: var(--terra); color: #fff; border: none;
+  padding: 1.15rem; font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase; cursor: pointer;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  transition: background 0.2s; margin-top: 0.3rem;
+}
+.presup-btn:hover { background: #a8421f; }
+.presup-btn.sent { background: var(--forest); cursor: default; }
+.presup-legal {
+  font-size: 0.62rem; color: var(--mid); line-height: 1.65;
+}
+
+/* ─── Proceso ─── */
+.proceso-section {
+  padding: 7rem 3rem;
+  background: var(--sand-mid);
+  border-top: 1px solid var(--concrete);
+}
+.proceso-header { margin-bottom: 4rem; }
+.proceso-eyebrow {
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.2rem; display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.proceso-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 300; color: var(--fg); margin-bottom: 1rem; line-height: 1.1;
+}
+.proceso-intro {
+  font-size: 0.88rem; color: var(--mid); line-height: 1.85;
+  max-width: 50ch;
+}
+.proceso-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--concrete);
+  list-style: none;
+}
+.paso {
+  background: var(--sand-mid); padding: 2.8rem 2.2rem 3rem;
+  position: relative; display: flex; flex-direction: column;
+}
+.paso::before {
+  content: ''; display: block;
+  width: 2.5rem; height: 2px;
+  background: var(--terra); margin-bottom: 2rem;
+}
+.paso-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 3.5rem; font-weight: 300;
+  color: var(--concrete); line-height: 1; margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.paso-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem; font-weight: 400; color: var(--fg);
+  margin-bottom: 0.9rem;
+}
+.paso-desc {
+  font-size: 0.82rem; line-height: 1.82; color: var(--mid);
+}
+
+
+/* ─── Proyecto Destacado Chalet ─── */
+.chalet-section {
+  padding: 0 3rem 6rem;
+}
+.chalet-header {
+  padding: 4rem 0 2.5rem;
+  border-top: 1px solid var(--concrete);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;
+}
+.chalet-eyebrow {
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); font-family: 'Bricolage Grotesque', sans-serif;
+}
+.chalet-tag {
+  font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mid); font-family: 'Bricolage Grotesque', sans-serif;
+}
+.chalet-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; min-height: 70vh;
+}
+.chalet-img {
+  overflow: hidden; position: relative; background: var(--sand-mid);
+}
+.chalet-img img { height: 100%; transition: transform 0.8s ease; }
+.chalet-img:hover img { transform: scale(1.03); }
+.chalet-info {
+  background: var(--dark);
+  padding: 4rem 3.5rem;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.chalet-location {
+  font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1.8rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.chalet-location::before {
+  content: ''; width: 1.5rem; height: 1px; background: var(--terra); flex-shrink: 0;
+}
+.chalet-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300; line-height: 1.1; color: var(--sand);
+  margin-bottom: 1.5rem; text-wrap: balance;
+}
+.chalet-desc {
+  font-size: 0.86rem; line-height: 1.85; color: var(--concrete);
+  margin-bottom: 2.5rem; max-width: 38ch;
+}
+.chalet-specs {
+  display: flex; gap: 2rem;
+  padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.chalet-spec-val {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.4rem; font-weight: 300; color: var(--sand); display: block;
+}
+.chalet-spec-label {
+  font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mid); display: block; margin-top: 0.3rem;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 800px) {
+  header { padding: 1.2rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+  nav { gap: 1.2rem; }
+  .bc-hero { grid-template-columns: 1fr; min-height: auto; }
+  .bc-hero-img { height: 70vw; min-height: 240px; }
+  .bc-hero-text { padding: 2rem 1.5rem; }
+  .section-header { padding: 3rem 1.5rem 1.5rem; }
+  .bc-grid { grid-template-columns: 1fr; grid-template-rows: auto; padding: 0 1.5rem; }
+  .bc-grid .grid-item { height: 260px; }
+  .bc-grid .grid-item.tall { grid-row: span 1; }
+  .bc-statement { grid-template-columns: 1fr; margin: 2rem 1.5rem 0; padding: 2rem; gap: 1.5rem; }
+  .statement-left { border-right: none; border-bottom: 1px solid var(--concrete); padding-right: 0; padding-bottom: 1.5rem; }
+  .shower-hero { grid-template-columns: 1fr; min-height: auto; padding: 0 1.5rem; }
+  .shower-hero-main { height: 70vw; min-height: 240px; }
+  .shower-hero-side { padding: 2rem 1.5rem; }
+  .shower-duo { grid-template-columns: 1fr; height: auto; margin: 2px 1.5rem 0; }
+  .shower-duo-item { height: 260px; }
+  .shower-note { margin: 2rem 1.5rem 0; }
+  .reno-placeholder { margin: 0 1.5rem; }
+  .shower-trio { grid-template-columns: 1fr; height: auto; margin: 2px 1.5rem 0; }
+  .shower-trio-item { height: 260px; }
+  .reno-hero { grid-template-columns: 1fr; min-height: auto; padding: 0 1.5rem; }
+  .reno-detail { margin: 2px 1.5rem 0; height: 280px; }
+  .reno-note { margin: 2rem 1.5rem 0; }
+  .reno-aside { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem 0; }
+  .chalet-section { padding: 0 1.5rem 4rem; }
+  .chalet-grid { grid-template-columns: 1fr; min-height: auto; }
+  .chalet-img { height: 70vw; min-height: 280px; }
+  .chalet-info { padding: 3rem 1.5rem; }
+  .chalet-specs { gap: 1.2rem; flex-wrap: wrap; }
+  .reno-aside-img { height: 320px; }
+  .qh-section { padding: 4rem 1.5rem 3rem; background: var(--sand-mid); }
+  .qh-grid { grid-template-columns: 1fr 1fr; }
+  .qh-card { padding: 2.5rem 1.8rem; }
+  .qs-section { padding: 4rem 1.5rem; }
+  .qs-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .faq-section { padding: 4rem 1.5rem; }
+  .faq-a-inner { padding-right: 1rem; }
+  .contact-section { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+
+  .presup-inner { grid-template-columns: 1fr; }
+  .presup-section { padding: 0; }
+  .presup-text { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid var(--concrete); }
+  .presup-section::before { font-size: 80vw; }
+  .presup-stats { gap: 1.5rem; }
+  .proceso-section { padding: 4rem 1.5rem; }
+  .proceso-steps { grid-template-columns: 1fr 1fr; }
+  footer { margin: 3rem 1.5rem 0; flex-direction: column; gap: 0.6rem; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  img { transition: none !important; }
+}
+</style>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <div class="logo-group">
+    <a class="logo" href="#" aria-label="Tacto – Reformas con Carácter">
+      <img src="images/img_001_57f5f896.png" alt="Tacto" height="50" style="display:block;height:50px;width:auto;">
+    </a>
+    <span class="logo-claim">Reformas con carácter</span>
+  </div>
+  <nav>
+    <a href="#presupuesto" data-i18n-html="nav-quote">Presupuesto</a>
+    <a href="#proceso" data-i18n-html="nav-process">Cómo trabajamos</a>
+    <a href="#hacemos" data-i18n-html="nav-services">Servicios</a>
+    <a href="#contacto" data-i18n-html="nav-contact">Contacto</a>
+  </nav>
+  <div class="lang-switcher" role="navigation" aria-label="Language">
+    <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+    <span class="lang-sep">·</span>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">·</span>
+    <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ═════════════════════════════════════
+     PRESUPUESTO (SEO HERO)
+     ═════════════════════════════════════ -->
+<section class="presup-section" id="presupuesto" aria-label="Solicitar presupuesto de reforma sin compromiso">
+  <div class="presup-inner">
+    <div class="presup-text">
+      <span class="presup-eyebrow" data-i18n-html="hero-eyebrow">Sin compromiso · Respuesta en 24 horas</span>
+      <h1 class="presup-title" data-i18n-html="hero-title">Reformas<br>con <em>carácter.</em></h1>
+      <p class="presup-desc" data-i18n-html="hero-desc">En <strong>Tacto</strong> ejecutamos <strong>reformas integrales</strong>, baños, cocinas, microcemento, iluminación y domótica. Equipo propio, precio cerrado desde el día uno.</p>
+      <div class="presup-stats">
+        <div>
+          <span class="presup-stat-num" data-i18n-html="stat-years">15 años</span>
+          <span class="presup-stat-label" data-i18n-html="stat-years-label">De experiencia</span>
+        </div>
+        <div>
+          <span class="presup-stat-num">100%</span>
+          <span class="presup-stat-label" data-i18n-html="stat-team-label">Equipo propio</span>
+        </div>
+      </div>
+      <ul class="presup-bullets">
+        <li data-i18n-html="bullet-1">Visita técnica gratuita a domicilio</li>
+        <li data-i18n-html="bullet-2">Presupuesto cerrado, sin costes ocultos</li>
+        <li data-i18n-html="bullet-3">Sin subcontratas — todo nuestro equipo</li>
+        <li data-i18n-html="bullet-4">Reformas de pisos, casas y locales comerciales</li>
+      </ul>
+    </div>
+    <form class="presup-form" onsubmit="handlePresupForm(event)" aria-label="Formulario de solicitud de presupuesto" style="background:var(--sand-mid); padding:5rem 3rem 5rem 4rem; display:flex; flex-direction:column; gap:1.25rem;">
+      <h2 class="presup-form-title" data-i18n-html="form-title">Pide tu presupuesto gratis</h2>
+      <div class="presup-field">
+        <label for="pf-name" data-i18n-html="form-name-label">Nombre</label>
+        <input id="pf-name" type="text" placeholder="Tu nombre completo" data-i18n-placeholder="form-name-ph" autocomplete="name" required>
+      </div>
+      <div class="presup-field">
+        <label for="pf-phone" data-i18n-html="form-phone-label">Teléfono de contacto</label>
+        <input id="pf-phone" type="tel" placeholder="+34 600 000 000" autocomplete="tel">
+      </div>
+      <div class="presup-field">
+        <label for="pf-type" data-i18n-html="form-type-label">Tipo de reforma</label>
+        <select id="pf-type" data-i18n-select="form-select">
+          <option value="">Selecciona el tipo de reforma</option>
+          <option>Reforma integral de vivienda</option>
+          <option>Reforma de baño</option>
+          <option>Reforma de cocina</option>
+          <option>Microcemento y revestimientos</option>
+          <option>Iluminación y domótica</option>
+          <option>Carpintería a medida</option>
+          <option>Local comercial u oficina</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="presup-field">
+        <label for="pf-msg">Describe tu proyecto <em style="font-style:normal;color:var(--concrete);font-size:0.9em">(opcional)</em></label>
+        <textarea id="pf-msg" rows="3" placeholder="Metros cuadrados, estado actual, materiales que te interesan..." data-i18n-placeholder="form-msg-ph"></textarea>
+      </div>
+      <button type="submit" class="presup-btn" id="presup-btn" data-i18n-html="form-btn">Solicitar presupuesto — es gratis</button>
+      <p class="presup-legal" data-i18n-html="form-legal">Al enviar este formulario aceptas nuestra política de privacidad. Tus datos no serán compartidos con terceros ni usados con fines comerciales ajenos a tu solicitud.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════
+     PROCESO — 4 PASOS
+     ═════════════════════════════════════ -->
+<section class="proceso-section" id="proceso" aria-label="Cómo trabajamos en Tacto">
+  <div class="proceso-header">
+    <span class="proceso-eyebrow" data-i18n-html="steps-eyebrow">Metodología</span>
+    <h2 class="proceso-title" data-i18n-html="steps-title">Tu reforma en 4 pasos</h2>
+    <p class="proceso-intro" data-i18n-html="steps-intro">Un proceso claro y transparente desde el primer contacto hasta la entrega de llaves, sin sorpresas ni intermediarios.</p>
+  </div>
+  <ol class="proceso-steps">
+    <li class="paso">
+      <span class="paso-num">01</span>
+      <h3 class="paso-title" data-i18n-html="step1-title">Cuéntanos tu proyecto</h3>
+      <p class="paso-desc" data-i18n-html="step1-desc">Rellena el formulario o llámanos. Explícanos qué quieres reformar, la superficie y tus ideas. En 24 horas te confirmamos disponibilidad.</p>
+    </li>
+    <li class="paso">
+      <span class="paso-num">02</span>
+      <h3 class="paso-title" data-i18n-html="step2-title">Visita técnica</h3>
+      <p class="paso-desc" data-i18n-html="step2-desc">Un técnico de Tacto acude al espacio, toma medidas y evalúa el estado real de la obra. La visita es completamente gratuita y sin compromiso.</p>
+    </li>
+    <li class="paso">
+      <span class="paso-num">03</span>
+      <h3 class="paso-title" data-i18n-html="step3-title">Presupuesto detallado</h3>
+      <p class="paso-desc" data-i18n-html="step3-desc">Recibes un presupuesto cerrado con todas las partidas desglosadas: materiales, mano de obra y plazos. Sin letra pequeña. Tú decides si sigues adelante.</p>
+    </li>
+    <li class="paso">
+      <span class="paso-num">04</span>
+      <h3 class="paso-title" data-i18n-html="step4-title">Empieza la obra</h3>
+      <p class="paso-desc" data-i18n-html="step4-desc">Nuestro equipo arranca en la fecha acordada. Te informamos en cada fase y gestionamos incidencias el mismo día. Entrega limpia y puntual.</p>
+    </li>
+  </ol>
+</section>
+
+
+<!-- ════════════════════════════════
+     SECTION 1 — BÉTON CIRÉ
+     ════════════════════════════════ -->
+<section class="portfolio-section" id="beton">
+  <div class="section-header">
+    <span class="section-number">I</span>
+    <h2 class="section-title" data-i18n-html="sec1-title">Microcemento</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="bc-hero">
+    <div class="bc-hero-img">
+      <img src="images/img_002_d792f204.jpg" alt="Îlot de cuisine en béton ciré poli, bords arrondis">
+    </div>
+    <div class="bc-hero-text">
+      <span class="hero-side-bar" aria-hidden="true"></span>
+      <div class="hero-eyebrow" data-i18n-html="micro-eyebrow">Tacto — Microcemento y Reformas</div>
+      <h1 class="hero-title" data-i18n-html="micro-title">La materia<br>en su<br><em>estado puro</em></h1>
+      <p class="hero-desc" data-i18n-html="micro-desc">Un espacio diseñado en torno al microcemento: encimera, isla monolítica, lavabo. Cada superficie pulida a mano, cada redondeo tallado para responder a la luz.</p>
+      <div class="hero-meta">
+        <div class="meta-item"><label data-i18n-html="meta-finish-label">Acabado</label><span data-i18n-html="meta-finish-val">Microcemento satinado</span></div>
+        <div class="meta-item"><label data-i18n-html="meta-tone-label">Tono</label><span data-i18n-html="meta-tone-val">Arena clara</span></div>
+        <div class="meta-item"><label data-i18n-html="meta-loc-label">Ubicación</label><span data-i18n-html="meta-loc-val">Residencia privada</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bc-grid">
+    <div class="grid-item tall">
+      <img src="images/img_003_b4c6bff6.jpg" alt="Vasque en béton ciré sur meuble bois, carreaux terracotta">
+      <div class="caption"><p>Lavabo y mueble de baño —<br>microcemento crema, grifería bronce</p></div>
+    </div>
+    <div class="grid-item">
+      <img src="images/img_004_ecc8a772.jpg" alt="Plan de bar en béton ciré, lumière rasante">
+      <div class="caption"><p>Encimera de bar — luz dorada,<br>superficie pulida mate/satinado</p></div>
+    </div>
+    <div class="grid-item">
+      <img src="images/img_005_87508457.jpg" alt="Détail table ronde béton ciré et tabourets chêne">
+      <div class="caption"><p>Mesa redonda — redondeo en microcemento,<br>taburetes de roble natural</p></div>
+    </div>
+  </div>
+
+  <div class="bc-statement">
+    <div class="statement-left">
+      <p data-i18n-html="micro-stmt-l">Una superficie que vive con la luz.</p>
+    </div>
+    <div class="statement-right">
+      <span data-i18n-html="micro-stmt-r">El microcemento no se congela: capta la luz de la mañana, cambia de tono con las horas, lleva la huella suave del tiempo. Este proyecto explora su plasticidad — de los bordes redondeados a la isla monolítica — en diálogo con la madera cruda y los azulejos de terracota.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     SECTION 2 — BAÑOS Y COCINAS
+     ════════════════════════════════ -->
+<section class="portfolio-section" id="douches">
+  <div class="section-header">
+    <span class="section-number">II</span>
+    <h2 class="section-title" data-i18n-html="sec2-title">Baños y Cocinas</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="shower-hero">
+    <div class="shower-hero-main">
+      <img src="images/img_006_fc81438e.jpg" alt="Douche carreaux vert et blanc rayés, porte ancienne en bois">
+      <div class="caption"><p>Rayures vert forêt / blanc — carreaux artisanaux,<br>robinetterie cuivre, porte ancienne à clous laiton</p></div>
+    </div>
+    <div class="shower-hero-side">
+      <span class="shower-side-bar" aria-hidden="true"></span>
+      <div class="shower-eyebrow" data-i18n-html="shower-eyebrow">Reforma de baño · Tacto</div>
+      <h3 class="shower-title" data-i18n-html="shower-title">Reforma de baño <em style="font-style:italic;color:var(--terra)">integral</em> y a medida</h3>
+      <p class="shower-desc" data-i18n-html="shower-desc">Transformamos baños completos llave en mano: demolición, fontanería, impermeabilización y acabado final. Especializados en duchas italianas a ras de suelo, microcemento continuo y revestimientos cerámicos de alta calidad. Sin subcontratas, con precio cerrado desde el primer día.</p>
+      <div class="shower-tags">
+        <span class="tag">Zellige</span>
+        <span class="tag">Terracota</span>
+        <span class="tag">Grifería bronce</span>
+        <span class="tag">Ducha italiana</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shower-duo">
+    <div class="shower-duo-item">
+      <img src="images/img_007_b9a7b890.jpg" alt="Détail carreaux terracotta et plâtre, robinetterie dorée">
+      <div class="caption"><p>Terracota y tadelakt — contraste de textura,<br>grifería dorada envejecida</p></div>
+    </div>
+    <div class="shower-duo-item">
+      <img src="images/img_008_267070f1.jpg" alt="Mur terracotta plein avec douche pluie et baignoire">
+      <div class="caption"><p>Pared terracota a toda altura —<br>alcachofa lluvia, bañera en microcemento</p></div>
+    </div>
+  </div>
+
+  <p class="shower-note" data-i18n-html="shower-note">
+    Una <strong>reforma de baño</strong> bien ejecutada transforma el uso diario del espacio: más confort, mayor eficiencia hídrica y un aumento real del valor del inmueble. En Tacto diseñamos cada baño desde cero — duchas a ras de suelo, mamparas a medida, muebles de obra y acabados continuos en microcemento — con plazos cumplidos y sin obras interminables.
+  </p>
+
+  <div class="shower-trio">
+    <div class="shower-trio-item">
+      <img src="images/img_009_13369467.jpg" alt="Vue d'ensemble de la douche">
+      <div class="caption"><p>Vista general — grifería bronce,<br>plato de ducha en microcemento integrado</p></div>
+    </div>
+    <div class="shower-trio-item">
+      <img src="images/img_010_1e0a8988.jpg" alt="Vasque sur meuble bois">
+      <div class="caption"><p>Lavabo sobre encimera, mueble madera maciza,<br>espejo de madera y bombilla Edison</p></div>
+    </div>
+    <div class="shower-trio-item">
+      <img src="images/img_011_38f9ba64.jpg" alt="Douche frontale">
+      <div class="caption"><p>Ducha frontal — plato extra plano,<br>marco tallado al fondo</p></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════
+     SECTION 3 — CARPINTERÍA
+     ════════════════════════════════ -->
+<section class="portfolio-section" id="renovations">
+  <div class="section-header">
+    <span class="section-number">III</span>
+    <h2 class="section-title" data-i18n-html="sec3-title">Carpintería</h2>
+    <div class="section-rule"></div>
+  </div>
+  <div class="reno-hero">
+    <div class="reno-hero-main">
+      <img src="images/img_012_45a2321b.jpg" alt="Ambiance lumineuse — lampe suspendue en travertin">
+    </div>
+    <div class="reno-hero-text">
+      <span class="reno-side-bar" aria-hidden="true"></span>
+      <p class="reno-eyebrow" data-i18n-html="reno-eyebrow">Madera maciza &amp; materiales nobles</p>
+      <h3 class="reno-title" data-i18n-html="reno-title">La madera como<br>hilo conductor</h3>
+      <p class="reno-desc" data-i18n-html="reno-desc">Mueble lavabo en madera maciza, espejo de marco en madera, celosías y paneles a medida — la carpintería estructura el espacio sin sobreargarlo. Cada pieza está pensada para dialogar con los azulejos, el revoco y el metal.</p>
+      <div class="shower-tags">
+        <span class="tag">Mueble a medida</span>
+        <span class="tag">Madera maciza</span>
+        <span class="tag">Acabados bronce</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reno-aside">
+    <div class="reno-aside-text">
+      <p class="reno-note-inline" style="margin-bottom:1.5rem" data-i18n-html="reno-aside-title"><strong style="color:var(--fg);font-weight:500;font-style:normal">Chalet — Reforma integral</strong></p>
+      <p class="reno-note-inline" data-i18n-html="reno-aside-desc">Rehabilitación completa de un chalet de madera: cocina abierta con muebles lacados en negro y encimera de pizarra, iluminación LED y lámparas colgantes artesanales, suelos de pino macizo restaurados. Carpintería, iluminación y acabados coordinados en un mismo proyecto.</p>
+    </div>
+    <div class="reno-aside-img">
+      <img src="images/img_013_ce30da1d.png" alt="Reforma integral chalet de madera en Asturias — cocina y comedor con carpintería a medida" alt="Lámpara colgante en travertino, arco de obra">
+      <div class="caption"><p>Arco de obra, persiana de madera a medida —<br>cortina de lino tejido, acabado revoco pigmentado</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     SECTION 4 — EXTERIORES & PISCINAS
+     ════════════════════════════════ -->
+<section class="portfolio-section" id="exteriores">
+  <div class="section-header">
+    <span class="section-number">IV</span>
+    <h2 class="section-title" data-i18n-html="sec4-title">Exteriores &amp; Piscinas</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="reno-hero">
+    <div class="reno-hero-main">
+      <img src="images/img_014_2a929f5b.jpg" alt="Piscina y zona exterior reformada por Tacto" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="reno-hero-side">
+      <span class="reno-side-bar" aria-hidden="true"></span>
+      <div class="shower-eyebrow" data-i18n-html="ext-eyebrow">Piscinas &amp; Exteriores · Tacto</div>
+      <h3 class="shower-title" data-i18n-html="ext-hero-title">Piscinas y exteriores con <em style="font-style:italic;color:var(--terra)">acabado total</em></h3>
+      <p class="shower-desc" data-i18n-html="ext-hero-desc">Reformamos piscinas, renovamos revestimientos e instalamos sistemas de tratamiento de agua con sal — más suave, más económico que el cloro — y diseñamos terrazas, porches y jardines que prolongan el interior con coherencia visual.</p>
+      <div class="shower-tags">
+        <span class="tag">Piscinas nuevas</span>
+        <span class="tag">Cambio cloro a sal</span>
+        <span class="tag">Terrazas &amp; Porches</span>
+        <span class="tag">Jardinería</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reno-aside">
+    <div class="reno-aside-text">
+      <span class="reno-side-bar" aria-hidden="true"></span>
+      <div class="shower-eyebrow">Piscinas &amp; Exteriores · Tacto</div>
+      <h3 class="shower-title" style="margin-bottom:1.5rem" data-i18n-html="ext-aside-title">De cloro a sal, y mucho <em style="font-style:italic;color:var(--terra)">más</em></h3>
+      <p style="font-size:0.88rem;line-height:1.8;color:var(--mid);margin-bottom:0.9rem" data-i18n-html="ext-p1">Una de las mejoras más demandadas es la <strong style="color:var(--fg);font-weight:500">conversión de cloro a sal</strong>: instalamos el clorador salino, ajustamos la filtración y revisamos la electrónica. Agua sin irritaciones, sin olor y mantenimiento mucho más económico. Compatible con cualquier piscina existente.</p>
+      <p style="font-size:0.88rem;line-height:1.8;color:var(--mid);margin-bottom:1.5rem" data-i18n-html="ext-p2">Para renovaciones diseñamos el revestimiento completo — gresite, microcemento, azulejo artesanal o piedra — con iluminación LED subacuática y depuradora integrada. Terrazas y porches en los mismos materiales que el interior, sin fisuras.</p>
+      <ul class="reno-list" data-i18n-html="ext-list">
+        <li>Conversión de cloro a sal — clorador salino e instalación completa</li>
+        <li>Reforma de vasos y renovación de revestimiento</li>
+        <li>Piscinas desbordantes, de skimmer o naturales</li>
+        <li>Terrazas en piedra natural, barro o microcemento exterior</li>
+        <li>Porches y pérgolas con madera tratada</li>
+        <li>Iluminación LED exterior e iluminación subacuática</li>
+        <li>Proyecto integral llave en mano, con precio cerrado</li>
+      </ul>
+    </div>
+    <div class="reno-aside-img">
+      <img src="images/img_015_ec5f164c.jpg" alt="Piscina de diseño con azulejos artesanales" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════════
+     QUÉ HACEMOS
+     ════════════════════════════════ -->
+
+<section class="qh-section" id="hacemos">
+  <div class="qh-header">
+    <span class="qh-eyebrow" data-i18n-html="qh-eyebrow">Nuestros oficios</span>
+    <h2 class="qh-title" data-i18n-html="qh-title">¿Qué hacemos?</h2>
+  </div>
+  <div class="qh-grid">
+    <div class="qh-card">
+      <span class="qh-card-num">01</span>
+      <h3 class="qh-card-title" data-i18n-html="card-01-title">Reforma de baño</h3>
+      <p class="qh-card-desc" data-i18n-html="card-01-desc">De bañera a ducha a ras de suelo. Fontanería, impermeabilización y revestimiento con microcemento o cerámica. Llave en mano.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">02</span>
+      <h3 class="qh-card-title" data-i18n-html="card-02-title">Reforma de cocina</h3>
+      <p class="qh-card-desc" data-i18n-html="card-02-desc">Islas, encimeras, bancadas y muebles de obra a medida. Sin juntas, sin tiradores, adaptados al espacio real de tu vivienda.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">03</span>
+      <h3 class="qh-card-title" data-i18n-html="card-03-title">Microcemento</h3>
+      <p class="qh-card-desc" data-i18n-html="card-03-desc">Suelos, paredes, escaleras y encimeras continuas. Acabados a mano: tadelakt, morteros de cal y relieves texturizados.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">04</span>
+      <h3 class="qh-card-title" data-i18n-html="card-04-title">Carpintería a medida</h3>
+      <p class="qh-card-desc" data-i18n-html="card-04-desc">Estructura, revestimiento y carpintería tallada a mano. Adaptada a cada hueco, sin catálogo: todo fabricado para tu espacio.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">05</span>
+      <h3 class="qh-card-title" data-i18n-html="card-05-title">Iluminación &amp; Domótica</h3>
+      <p class="qh-card-desc" data-i18n-html="card-05-desc">Diseño lumínico LED, automatización de persianas, climatización y seguridad. Tu hogar, controlado desde el móvil con eficiencia energética real.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">06</span>
+      <h3 class="qh-card-title" data-i18n-html="card-06-title">Reforma Integral</h3>
+      <p class="qh-card-desc" data-i18n-html="card-06-desc">Transformamos viviendas completas llave en mano: proyecto, licencias, ejecución y entrega. Un solo interlocutor, cero sorpresas en el presupuesto.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">07</span>
+      <h3 class="qh-card-title" data-i18n-html="card-07-title">Piscinas &amp; Exterior</h3>
+      <p class="qh-card-desc" data-i18n-html="card-07-desc">Reforma de piscinas, terrazas, porches, pavimentos exteriores y jardines. Materiales resistentes al clima con acabados de interiorismo.</p>
+    </div>
+    <div class="qh-card">
+      <span class="qh-card-num">08</span>
+      <h3 class="qh-card-title" data-i18n-html="card-08-title">Interiorismo &amp; Decoración</h3>
+      <p class="qh-card-desc" data-i18n-html="card-08-desc">Diseño de interiores, selección de materiales, mobiliario y decoración. Coordinamos el proyecto completo para que el espacio final tenga coherencia, carácter y personalidad propia.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     QUIÉNES SOMOS
+     ════════════════════════════════ -->
+<section class="qs-section" id="nosotros">
+  <div class="qs-inner">
+    <div class="qs-left">
+      <p class="qs-label" data-i18n-html="qs-label">Quiénes somos</p>
+      <h2 class="qs-headline" data-i18n-html="qs-headline">Diseñamos y construimos.<br>La misma mano<br>hace las dos cosas.</h2>
+    </div>
+    <div class="qs-right">
+      <div class="qs-body">
+        <p data-i18n-html="qs-p1">En una reforma normal, alguien diseña y otro ejecuta. Cuando se abre una pared y aparece algo que no estaba previsto, el proyecto se recorta o se para. Aquí no: la decisión se toma en el sitio, con el material en la mano, y el dibujo se adapta a lo que hay. Por eso ningún baño y ninguna cocina que hacemos se parece a otra, y por eso no trabajamos con catálogos de muebles: <em>lo que no cabe, se construye a medida.</em></p>
+        <p data-i18n-html="qs-p2">Trabajamos con las manos desde hace años, en obra nueva y en rehabilitación, y con oficios que ya casi nadie ofrece: zellige artesanal, tadelakt, morteros de cal, talla en madera y en mortero. Atendemos en <em>español, inglés y francés.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     PREGUNTAS FRECUENTES
+     ════════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-header">
+    <div class="section-header" style="padding: 0 0 2rem;">
+      <span class="section-number" style="color:var(--terra)">FAQ</span>
+      <h2 class="section-title" data-i18n-html="faq-title">Lo que nos preguntan<br>antes de contratar</h2>
+      <div class="section-rule"></div>
+    </div>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-1-q">¿Cuánto cuesta reformar un baño en Coín o Alhaurín el Grande?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-1-a">
+          Una reforma completa de baño en el Valle del Guadalhorce suele situarse entre 4.500 € y 8.000 €, según el tamaño y el acabado. Incluye demolición, fontanería, impermeabilización, revestimiento y sanitarios. Cambiar la bañera por una ducha a ras de suelo con acabado en microcemento parte de unos 4.500 € en un baño de 5 a 6 m². Un mueble de obra a medida, en lugar de uno comprado, añade entre 600 € y 1.200 € según el desarrollo. Los baños con reubicación de desagües suben de precio porque implican tocar la red de saneamiento. Damos siempre un precio cerrado por escrito antes de empezar.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-2-q">¿Qué es una isla o un mueble de obra y por qué cuesta más?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-2-a">
+          Es un mueble levantado en el sitio con material de construcción y revestido después, en lugar de comprarse montado. Cuesta más en mano de obra porque son entre una y tres semanas de trabajo, pero no tiene juntas donde se acumule suciedad, no lleva tiradores ni bisagras que se aflojen, y se ajusta al centímetro al hueco existente, algo decisivo en casas antiguas donde ninguna pared está a escuadra. Las esquinas se redondean a mano, así que no hay cantos que se astillen ni golpeen. A cambio, no se puede mover ni cambiar de sitio: es una decisión permanente y conviene dibujarla bien antes.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-3-q">¿Se puede aplicar microcemento sin quitar el azulejo?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-3-a">
+          Sí, y es una de sus grandes ventajas: se aplica sobre el azulejo existente sin picar, lo que elimina el escombro, el ruido y varios días de obra. Pero hay condiciones. El azulejo tiene que estar firme, sin piezas huecas ni sueltas, y el soporte seco y sin humedades por capilaridad. Antes de aplicar nada comprobamos pieza por pieza golpeando la superficie, y sellamos las juntas para que no se marquen a través del acabado. Si detectamos humedad o azulejo desprendido, lo decimos y se pica esa zona: aplicar microcemento sobre un soporte que se mueve garantiza que se agriete en pocos meses.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-4-q">¿El microcemento se agrieta o se mancha?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-4-a">
+          Bien ejecutado, no. Los problemas que se ven en internet vienen casi siempre de tres errores: soporte mal preparado, malla de refuerzo omitida para ahorrar, o sellado insuficiente. El microcemento no es impermeable por sí mismo: la estanqueidad la da la lámina que va debajo, y el sellador de poliuretano de la capa final es lo que impide que el agua y el jabón penetren. Aplicamos entre cinco y siete capas con malla en toda la zona húmeda y dos manos de sellador. El mantenimiento es jabón neutro, nada de amoniaco ni limpiadores ácidos, que atacan el sellador. Cada seis o siete años conviene refrescar el sellado, una operación de un día.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-5-q">¿Cuánto se tarda en cambiar la bañera por una ducha?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-5-a">
+          Entre 8 y 12 días laborables, y el baño está fuera de servicio durante casi todo ese tiempo. El desglose habitual: dos días de demolición y retirada de escombro, dos de fontanería y saneamiento, uno de impermeabilización, tres o cuatro de aplicación del revestimiento con sus tiempos de secado entre capas, y uno o dos de montaje de sanitarios y sellados. Los tiempos de secado no se pueden acelerar: es donde se estropea el trabajo de quien va con prisa. Si es el único baño de la casa, lo planificamos para que el corte de agua sea el mínimo posible y avisamos con antelación de los días críticos.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-6-q">¿Cuánto cuesta pasar una piscina de cloro a sal?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-6-a">
+          La conversión de una piscina de cloro a sal cuesta habitualmente entre 800 € y 1.800 €, según el volumen de agua y el estado del sistema de depuración existente. El precio incluye el clorador salino, la instalación eléctrica, el ajuste del dosificador y la puesta en marcha. Si la depuradora o el cuadro eléctrico necesitan actualización, sube el presupuesto, pero en la mayoría de piscinas residenciales de menos de 50 m³ la instalación no requiere tocar la sala de máquinas más allá de conectar el equipo. El ahorro en productos químicos recupera la inversión en dos o tres temporadas: el coste anual de mantenimiento de una piscina de sal es entre un 60 % y un 70 % inferior al de una de cloro. Además, el agua es más suave para la piel, no destiñe el bañador y elimina el olor característico. El sistema es compatible con cualquier piscina ya construida.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-7-q">¿Se puede renovar el revestimiento de la piscina sin demoler el vaso?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-7-a">
+          Sí, en la mayoría de los casos. Si el vaso está estructuralmente bien — sin fisuras activas ni movimiento — el revestimiento antiguo se puede picar o preparar como soporte y aplicar directamente el nuevo material encima. Las opciones más habituales son: gresite sobre gresite existente (siempre que el soporte esté adherido), microcemento proyectado hidrófugo para piscinas, lámina de PVC armada o pintura de poliuretano para presupuestos más ajustados. El proceso lleva entre 5 y 10 días, con la piscina vaciada, y la puesta en marcha otros dos o tres días. Lo que no se puede evitar es el vaciado total y el tiempo de curado del nuevo acabado antes de llenar: intentar acelerar esa fase es la causa principal de que los revestimientos fallen al primer año.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-8-q">¿Qué ventaja tiene la carpintería a medida frente al mueble de catálogo?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-8-a">
+          La carpintería a medida se adapta al espacio real, no al revés. En casas antiguas o reformadas, donde rara vez hay dos paredes paralelas ni escuadras perfectas, un mueble de catálogo siempre deja huecos, requiere recortes o simplemente no cabe. El mueble de obra o la carpintería fabricada en taller para ese hueco concreto ocupa exactamente el espacio disponible, sin perder centímetros ni disimular nada con rodapiés añadidos. Además, los materiales son macizos o de alta densidad — frente al aglomerado estándar de la mayoría de los muebles de serie — lo que se nota en el tacto, en el peso de las puertas y en la durabilidad. El coste es entre un 30 % y un 80 % más alto según el tipo de madera y el acabado, pero la vida útil es varias veces mayor y la pieza no queda anticuada porque no sigue ninguna tendencia de catálogo.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-9-q">¿Puedo reformar la terraza y el exterior a la vez que el interior?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-9-a">
+          Es la opción más eficiente. Cuando interior y exterior se reforman en el mismo proyecto, el trabajo de fontanería, electricidad y saneamiento se coordina sin tener que abrir y cerrar dos veces. Además, el criterio de materiales se establece una sola vez: el microcemento de la cocina puede continuarse como pavimento exterior, la madera de los armarios puede repetirse en la pérgola, y los tonos de la fachada se alinean con los del interior. Hacer las dos fases por separado obliga a tomar decisiones de acabado sin ver el conjunto, y con frecuencia el resultado final tiene menos coherencia. El presupuesto conjunto también suele ser más económico que contratar dos obras distintas, porque los costes fijos de movilización, andamios y gestión de escombros se comparten.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n-html="faq-10-q">¿En qué zonas trabajáis?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner" data-i18n-html="faq-10-a">
+          Trabajamos en Málaga, Marbella, Fuengirola, Coín, Alhaurín el Grande, Alhaurín de la Torre, Cártama, Pizarra, Monda, Guaro y el resto del Valle del Guadalhorce. Atendemos en español, inglés y francés.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     CONTACTO
+     ════════════════════════════════ -->
+<section class="contact-section" id="contacto">
+  <div class="contact-left">
+    <h2 class="contact-title" data-i18n-html="contact-title">Hablemos<br>de tu proyecto.</h2>
+    <p class="contact-sub" data-i18n-html="contact-sub">Respondemos en menos de 24 horas. Presupuesto gratuito y sin compromiso. Atendemos en español, inglés y francés.</p>
+  </div>
+  <div class="contact-right">
+    <div class="contact-phone">658 160 029</div>
+    <a class="contact-wa-btn" href="https://wa.me/34658160029" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-i18n-html="contact-wa">Escríbenos por WhatsApp</span>
+    </a>
+    <p class="contact-langs">ES &nbsp;·&nbsp; EN &nbsp;·&nbsp; FR</p>
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+
+<footer>
+  <span>Tacto · Reformas con Carácter</span>
+  <span>2024 — 2025</span>
+</footer>
+
+<script>
+function handlePresupForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('presup-btn');
+  btn.textContent = '¡Solicitud enviada! Te contactamos en 24 h';
+  btn.classList.add('sent');
+  btn.disabled = true;
+}
+</script>
+
+
+
+<script>
+/* ── Tacto i18n ── */
+const T = {
+  es: {
+    'nav-quote':'Presupuesto','nav-process':'Cómo trabajamos','nav-services':'Servicios','nav-contact':'Contacto',
+    'hero-eyebrow':'Sin compromiso · Respuesta en 24 horas',
+    'hero-title':'Reformas<br>con <em>carácter.</em>',
+    'hero-desc':'En <strong>Tacto</strong> ejecutamos <strong>reformas integrales</strong>, baños, cocinas, microcemento, iluminación y domótica. Equipo propio, precio cerrado desde el día uno.',
+    'stat-years':'15 años','stat-years-label':'De experiencia','stat-team-label':'Equipo propio',
+    'bullet-1':'Visita técnica gratuita a domicilio','bullet-2':'Presupuesto cerrado, sin costes ocultos',
+    'bullet-3':'Sin subcontratas — todo nuestro equipo','bullet-4':'Reformas de pisos, casas y locales comerciales',
+    'form-title':'Pide tu presupuesto gratis','form-name-label':'Nombre','form-name-ph':'Tu nombre completo',
+    'form-phone-label':'Teléfono de contacto','form-type-label':'Tipo de reforma',
+    'form-select':'<option value="">Selecciona el tipo de reforma</option><option>Reforma integral de vivienda</option><option>Reforma de baño</option><option>Reforma de cocina</option><option>Microcemento y revestimientos</option><option>Iluminación y domótica</option><option>Carpintería a medida</option><option>Local comercial u oficina</option><option>Otro</option>',
+    'form-msg-ph':'Metros cuadrados, estado actual, materiales que te interesan...',
+    'form-btn':'Solicitar presupuesto — es gratis',
+    'form-legal':'Al enviar este formulario aceptas nuestra política de privacidad. Tus datos no serán compartidos con terceros ni usados con fines comerciales ajenos a tu solicitud.',
+    'form-sent':'¡Solicitud enviada! Te contactamos en 24 h',
+    'steps-eyebrow':'Metodología','steps-title':'Tu reforma en 4 pasos',
+    'steps-intro':'Un proceso claro y transparente desde el primer contacto hasta la entrega de llaves, sin sorpresas ni intermediarios.',
+    'step1-title':'Cuéntanos tu proyecto','step1-desc':'Rellena el formulario o llámanos. Explícanos qué quieres reformar, la superficie y tus ideas. En 24 horas te confirmamos disponibilidad.',
+    'step2-title':'Visita técnica','step2-desc':'Un técnico de Tacto acude al espacio, toma medidas y evalúa el estado real de la obra. La visita es completamente gratuita y sin compromiso.',
+    'step3-title':'Presupuesto detallado','step3-desc':'Recibes un presupuesto cerrado con todas las partidas desglosadas: materiales, mano de obra y plazos. Sin letra pequeña. Tú decides si sigues adelante.',
+    'step4-title':'Empieza la obra','step4-desc':'Nuestro equipo arranca en la fecha acordada. Te informamos en cada fase y gestionamos incidencias el mismo día. Entrega limpia y puntual.',
+    'sec1-title':'Microcemento','sec2-title':'Baños y Cocinas','sec3-title':'Carpintería','sec4-title':'Exteriores &amp; Piscinas',
+    'micro-eyebrow':'Tacto — Microcemento y Reformas',
+    'micro-title':'La materia<br>en su<br><em>estado puro</em>',
+    'micro-desc':'Un espacio diseñado en torno al microcemento: encimera, isla monolítica, lavabo. Cada superficie pulida a mano, cada redondeo tallado para responder a la luz.',
+    'meta-finish-label':'Acabado','meta-finish-val':'Microcemento satinado','meta-tone-label':'Tono','meta-tone-val':'Arena clara','meta-loc-label':'Ubicación','meta-loc-val':'Residencia privada',
+    'micro-stmt-l':'Una superficie que vive con la luz.',
+    'micro-stmt-r':'El microcemento no se congela: capta la luz de la mañana, cambia de tono con las horas, lleva la huella suave del tiempo. Este proyecto explora su plasticidad — de los bordes redondeados a la isla monolítica — en diálogo con la madera cruda y los azulejos de terracota.',
+    'shower-eyebrow':'Reforma de baño · Tacto',
+    'shower-title':'Reforma de baño <em style="font-style:italic;color:var(--terra)">integral</em> y a medida',
+    'shower-desc':'Transformamos baños completos llave en mano: demolición, fontanería, impermeabilización y acabado final. Especializados en duchas italianas a ras de suelo, microcemento continuo y revestimientos cerámicos de alta calidad. Sin subcontratas, con precio cerrado desde el primer día.',
+    'shower-note':'Una <strong>reforma de baño</strong> bien ejecutada transforma el uso diario del espacio: más confort, mayor eficiencia hídrica y un aumento real del valor del inmueble. En Tacto diseñamos cada baño desde cero — duchas a ras de suelo, mamparas a medida, muebles de obra y acabados continuos en microcemento — con plazos cumplidos y sin obras interminables.',
+    'reno-eyebrow':'Madera maciza &amp; materiales nobles','reno-title':'La madera como<br>hilo conductor',
+    'reno-desc':'Mueble lavabo en madera maciza, espejo de marco en madera, celosías y paneles a medida — la carpintería estructura el espacio sin sobreargarlo. Cada pieza está pensada para dialogar con los azulejos, el revoco y el metal.',
+    'reno-aside-title':'<strong style="color:var(--fg);font-weight:500;font-style:normal">Chalet — Reforma integral</strong>',
+    'reno-aside-desc':'Rehabilitación completa de un chalet de madera: cocina abierta con muebles lacados en negro y encimera de pizarra, iluminación LED y lámparas colgantes artesanales, suelos de pino macizo restaurados. Carpintería, iluminación y acabados coordinados en un mismo proyecto.',
+    'ext-eyebrow':'Piscinas &amp; Exteriores · Tacto','ext-aside-eyebrow':'Piscinas &amp; Exteriores · Tacto',
+    'ext-hero-title':'Piscinas y exteriores con <em style="font-style:italic;color:var(--terra)">acabado total</em>',
+    'ext-hero-desc':'Reformamos piscinas, renovamos revestimientos e instalamos sistemas de tratamiento de agua con sal — más suave, más económico que el cloro — y diseñamos terrazas, porches y jardines que prolongan el interior con coherencia visual.',
+    'ext-aside-title':'De cloro a sal, y mucho <em style="font-style:italic;color:var(--terra)">más</em>',
+    'ext-p1':'Una de las mejoras más demandadas es la <strong style="color:var(--fg);font-weight:500">conversión de cloro a sal</strong>: instalamos el clorador salino, ajustamos la filtración y revisamos la electrónica. Agua sin irritaciones, sin olor y mantenimiento mucho más económico. Compatible con cualquier piscina existente.',
+    'ext-p2':'Para renovaciones diseñamos el revestimiento completo — gresite, microcemento, azulejo artesanal o piedra — con iluminación LED subacuática y depuradora integrada. Terrazas y porches en los mismos materiales que el interior, sin fisuras.',
+    'ext-list':'<li>Conversión de cloro a sal — clorador salino e instalación completa</li><li>Reforma de vasos y renovación de revestimiento</li><li>Piscinas desbordantes, de skimmer o naturales</li><li>Terrazas en piedra natural, barro o microcemento exterior</li><li>Porches y pérgolas con madera tratada</li><li>Iluminación LED exterior e iluminación subacuática</li><li>Proyecto integral llave en mano, con precio cerrado</li>',
+    'qh-eyebrow':'Nuestros oficios','qh-title':'¿Qué hacemos?',
+    'card-01-title':'Reforma de baño','card-01-desc':'De bañera a ducha a ras de suelo. Fontanería, impermeabilización y revestimiento con microcemento o cerámica. Llave en mano.',
+    'card-02-title':'Reforma de cocina','card-02-desc':'Islas, encimeras, bancadas y muebles de obra a medida. Sin juntas, sin tiradores, adaptados al espacio real de tu vivienda.',
+    'card-03-title':'Microcemento','card-03-desc':'Suelos, paredes, escaleras y encimeras continuas. Acabados a mano: tadelakt, morteros de cal y relieves texturizados.',
+    'card-04-title':'Carpintería a medida','card-04-desc':'Estructura, revestimiento y carpintería tallada a mano. Adaptada a cada hueco, sin catálogo: todo fabricado para tu espacio.',
+    'card-05-title':'Iluminación &amp; Domótica','card-05-desc':'Diseño lumínico LED, automatización de persianas, climatización y seguridad. Tu hogar, controlado desde el móvil con eficiencia energética real.',
+    'card-06-title':'Reforma Integral','card-06-desc':'Transformamos viviendas completas llave en mano: proyecto, licencias, ejecución y entrega. Un solo interlocutor, cero sorpresas en el presupuesto.',
+    'card-07-title':'Piscinas &amp; Exterior','card-07-desc':'Reforma de piscinas, terrazas, porches, pavimentos exteriores y jardines. Materiales resistentes al clima con acabados de interiorismo.',
+    'card-08-title':'Interiorismo &amp; Decoración','card-08-desc':'Diseño de interiores, selección de materiales, mobiliario y decoración. Coordinamos el proyecto completo para que el espacio final tenga coherencia, carácter y personalidad propia.',
+    'qs-label':'Quiénes somos',
+    'qs-headline':'Diseñamos y construimos.<br>La misma mano<br>hace las dos cosas.',
+    'qs-p1':'En una reforma normal, alguien diseña y otro ejecuta. Cuando se abre una pared y aparece algo que no estaba previsto, el proyecto se recorta o se para. Aquí no: la decisión se toma en el sitio, con el material en la mano, y el dibujo se adapta a lo que hay. Por eso ningún baño y ninguna cocina que hacemos se parece a otra, y por eso no trabajamos con catálogos de muebles: <em>lo que no cabe, se construye a medida.</em>',
+    'qs-p2':'Trabajamos con las manos desde hace años, en obra nueva y en rehabilitación, y con oficios que ya casi nadie ofrece: zellige artesanal, tadelakt, morteros de cal, talla en madera y en mortero. Atendemos en <em>español, inglés y francés.</em>',
+    'faq-title':'Lo que nos preguntan<br>antes de contratar',
+    'faq-1-q':'¿Cuánto cuesta reformar un baño en Coín o Alhaurín el Grande?',
+    'faq-1-a':'Una reforma completa de baño en el Valle del Guadalhorce suele situarse entre 4.500 € y 8.000 €, según el tamaño y el acabado. Incluye demolición, fontanería, impermeabilización, revestimiento y sanitarios. Cambiar la bañera por una ducha a ras de suelo con acabado en microcemento parte de unos 4.500 € en un baño de 5 a 6 m². Un mueble de obra a medida, en lugar de uno comprado, añade entre 600 € y 1.200 € según el desarrollo. Los baños con reubicación de desagües suben de precio porque implican tocar la red de saneamiento. Damos siempre un precio cerrado por escrito antes de empezar.',
+    'faq-2-q':'¿Qué es una isla o un mueble de obra y por qué cuesta más?',
+    'faq-2-a':'Es un mueble levantado en el sitio con material de construcción y revestido después, en lugar de comprarse montado. Cuesta más en mano de obra porque son entre una y tres semanas de trabajo, pero no tiene juntas donde se acumule suciedad, no lleva tiradores ni bisagras que se aflojen, y se ajusta al centímetro al hueco existente, algo decisivo en casas antiguas donde ninguna pared está a escuadra. Las esquinas se redondean a mano, así que no hay cantos que se astillen ni golpeen. A cambio, no se puede mover ni cambiar de sitio: es una decisión permanente y conviene dibujarla bien antes.',
+    'faq-3-q':'¿Se puede aplicar microcemento sin quitar el azulejo?',
+    'faq-3-a':'Sí, y es una de sus grandes ventajas: se aplica sobre el azulejo existente sin picar, lo que elimina el escombro, el ruido y varios días de obra. Pero hay condiciones. El azulejo tiene que estar firme, sin piezas huecas ni sueltas, y el soporte seco y sin humedades por capilaridad. Antes de aplicar nada comprobamos pieza por pieza golpeando la superficie, y sellamos las juntas para que no se marquen a través del acabado. Si detectamos humedad o azulejo desprendido, lo decimos y se pica esa zona: aplicar microcemento sobre un soporte que se mueve garantiza que se agriete en pocos meses.',
+    'faq-4-q':'¿El microcemento se agrieta o se mancha?',
+    'faq-4-a':'Bien ejecutado, no. Los problemas que se ven en internet vienen casi siempre de tres errores: soporte mal preparado, malla de refuerzo omitida para ahorrar, o sellado insuficiente. El microcemento no es impermeable por sí mismo: la estanqueidad la da la lámina que va debajo, y el sellador de poliuretano de la capa final es lo que impide que el agua y el jabón penetren. Aplicamos entre cinco y siete capas con malla en toda la zona húmeda y dos manos de sellador. El mantenimiento es jabón neutro, nada de amoniaco ni limpiadores ácidos, que atacan el sellador. Cada seis o siete años conviene refrescar el sellado, una operación de un día.',
+    'faq-5-q':'¿Cuánto se tarda en cambiar la bañera por una ducha?',
+    'faq-5-a':'Entre 8 y 12 días laborables, y el baño está fuera de servicio durante casi todo ese tiempo. El desglose habitual: dos días de demolición y retirada de escombro, dos de fontanería y saneamiento, uno de impermeabilización, tres o cuatro de aplicación del revestimiento con sus tiempos de secado entre capas, y uno o dos de montaje de sanitarios y sellados. Los tiempos de secado no se pueden acelerar: es donde se estropea el trabajo de quien va con prisa. Si es el único baño de la casa, lo planificamos para que el corte de agua sea el mínimo posible y avisamos con antelación de los días críticos.',
+    'faq-6-q':'¿Cuánto cuesta pasar una piscina de cloro a sal?',
+    'faq-6-a':'La conversión de una piscina de cloro a sal cuesta habitualmente entre 800 € y 1.800 €, según el volumen de agua y el estado del sistema de depuración existente. El precio incluye el clorador salino, la instalación eléctrica, el ajuste del dosificador y la puesta en marcha. Si la depuradora o el cuadro eléctrico necesitan actualización, sube el presupuesto, pero en la mayoría de piscinas residenciales de menos de 50 m³ la instalación no requiere tocar la sala de máquinas más allá de conectar el equipo. El ahorro en productos químicos recupera la inversión en dos o tres temporadas: el coste anual de mantenimiento de una piscina de sal es entre un 60 % y un 70 % inferior al de una de cloro. Además, el agua es más suave para la piel, no destiñe el bañador y elimina el olor característico. El sistema es compatible con cualquier piscina ya construida.',
+    'faq-7-q':'¿Se puede renovar el revestimiento de la piscina sin demoler el vaso?',
+    'faq-7-a':'Sí, en la mayoría de los casos. Si el vaso está estructuralmente bien — sin fisuras activas ni movimiento — el revestimiento antiguo se puede picar o preparar como soporte y aplicar directamente el nuevo material encima. Las opciones más habituales son: gresite sobre gresite existente (siempre que el soporte esté adherido), microcemento proyectado hidrófugo para piscinas, lámina de PVC armada o pintura de poliuretano para presupuestos más ajustados. El proceso lleva entre 5 y 10 días, con la piscina vaciada, y la puesta en marcha otros dos o tres días. Lo que no se puede evitar es el vaciado total y el tiempo de curado del nuevo acabado antes de llenar: intentar acelerar esa fase es la causa principal de que los revestimientos fallen al primer año.',
+    'faq-8-q':'¿Qué ventaja tiene la carpintería a medida frente al mueble de catálogo?',
+    'faq-8-a':'La carpintería a medida se adapta al espacio real, no al revés. En casas antiguas o reformadas, donde rara vez hay dos paredes paralelas ni escuadras perfectas, un mueble de catálogo siempre deja huecos, requiere recortes o simplemente no cabe. El mueble de obra o la carpintería fabricada en taller para ese hueco concreto ocupa exactamente el espacio disponible, sin perder centímetros ni disimular nada con rodapiés añadidos. Además, los materiales son macizos o de alta densidad — frente al aglomerado estándar de la mayoría de los muebles de serie — lo que se nota en el tacto, en el peso de las puertas y en la durabilidad. El coste es entre un 30 % y un 80 % más alto según el tipo de madera y el acabado, pero la vida útil es varias veces mayor y la pieza no queda anticuada porque no sigue ninguna tendencia de catálogo.',
+    'faq-9-q':'¿Puedo reformar la terraza y el exterior a la vez que el interior?',
+    'faq-9-a':'Es la opción más eficiente. Cuando interior y exterior se reforman en el mismo proyecto, el trabajo de fontanería, electricidad y saneamiento se coordina sin tener que abrir y cerrar dos veces. Además, el criterio de materiales se establece una sola vez: el microcemento de la cocina puede continuarse como pavimento exterior, la madera de los armarios puede repetirse en la pérgola, y los tonos de la fachada se alinean con los del interior. Hacer las dos fases por separado obliga a tomar decisiones de acabado sin ver el conjunto, y con frecuencia el resultado final tiene menos coherencia. El presupuesto conjunto también suele ser más económico que contratar dos obras distintas, porque los costes fijos de movilización, andamios y gestión de escombros se comparten.',
+    'faq-10-q':'¿En qué zonas trabajáis?',
+    'faq-10-a':'Trabajamos en Málaga, Marbella, Fuengirola, Coín, Alhaurín el Grande, Alhaurín de la Torre, Cártama, Pizarra, Monda, Guaro y el resto del Valle del Guadalhorce. Atendemos en español, inglés y francés.',
+    'contact-title':'Hablemos<br>de tu proyecto.',
+    'contact-sub':'Respondemos en menos de 24 horas. Presupuesto gratuito y sin compromiso. Atendemos en español, inglés y francés.',
+    'contact-wa':'Escríbenos por WhatsApp',
+  },
+  en: {
+    'nav-quote':'Quote','nav-process':'How we work','nav-services':'Services','nav-contact':'Contact',
+    'hero-eyebrow':'No obligation · Reply within 24 hours',
+    'hero-title':'Renovations<br>with <em>character.</em>',
+    'hero-desc':'At <strong>Tacto</strong> we carry out <strong>full renovations</strong>, bathrooms, kitchens, microcement, lighting and home automation. Our own team, fixed price from day one.',
+    'stat-years':'15 years','stat-years-label':'Of experience','stat-team-label':'Our own team',
+    'bullet-1':'Free technical visit at your home','bullet-2':'Fixed quote, no hidden costs',
+    'bullet-3':'No subcontractors — entirely our own team','bullet-4':'Flat, house and commercial premises renovation',
+    'form-title':'Get your free quote','form-name-label':'Name','form-name-ph':'Your full name',
+    'form-phone-label':'Phone number','form-type-label':'Type of renovation',
+    'form-select':'<option value="">Select the type of renovation</option><option>Full home renovation</option><option>Bathroom renovation</option><option>Kitchen renovation</option><option>Microcement and cladding</option><option>Lighting and home automation</option><option>Bespoke carpentry</option><option>Commercial premises or office</option><option>Other</option>',
+    'form-msg-ph':'Square metres, current state, materials of interest...',
+    'form-btn':'Request a quote — it\'s free',
+    'form-legal':'By submitting this form you accept our privacy policy. Your data will not be shared with third parties or used for commercial purposes unrelated to your request.',
+    'form-sent':'Request sent! We\'ll contact you within 24h',
+    'steps-eyebrow':'Methodology','steps-title':'Your renovation in 4 steps',
+    'steps-intro':'A clear and transparent process from first contact to key handover, with no surprises or intermediaries.',
+    'step1-title':'Tell us your project','step1-desc':'Fill in the form or call us. Tell us what you want to renovate, the surface area and your ideas. Within 24 hours we will confirm availability.',
+    'step2-title':'Technical visit','step2-desc':'A Tacto technician visits the space, takes measurements and assesses the actual state of the works. The visit is completely free and with no obligation.',
+    'step3-title':'Detailed quote','step3-desc':'You receive a fixed quote with all items broken down: materials, labour and timelines. No small print. You decide whether to go ahead.',
+    'step4-title':'Work begins','step4-desc':'Our team starts on the agreed date. We keep you informed at every stage and handle any issues the same day. Clean and punctual handover.',
+    'sec1-title':'Microcement','sec2-title':'Bathrooms &amp; Kitchens','sec3-title':'Carpentry','sec4-title':'Exteriors &amp; Pools',
+    'micro-eyebrow':'Tacto — Microcement and Renovations',
+    'micro-title':'The material<br>in its<br><em>pure state</em>',
+    'micro-desc':'A space designed around microcement: worktop, monolithic island, washbasin. Every surface hand-polished, every curve shaped to respond to the light.',
+    'meta-finish-label':'Finish','meta-finish-val':'Satin microcement','meta-tone-label':'Tone','meta-tone-val':'Light sand','meta-loc-label':'Location','meta-loc-val':'Private residence',
+    'micro-stmt-l':'A surface that lives with the light.',
+    'micro-stmt-r':'Microcement does not freeze: it captures the morning light, shifts tone through the hours, carries the soft mark of time. This project explores its plasticity — from rounded edges to the monolithic island — in dialogue with raw wood and terracotta tiles.',
+    'shower-eyebrow':'Bathroom renovation · Tacto',
+    'shower-title':'Full <em style="font-style:italic;color:var(--terra)">bespoke</em> bathroom renovation',
+    'shower-desc':'We transform complete bathrooms turnkey: demolition, plumbing, waterproofing and final finish. Specialised in flush-to-floor Italian showers, continuous microcement and high-quality ceramic cladding. No subcontractors, fixed price from day one.',
+    'shower-note':'A well-executed <strong>bathroom renovation</strong> transforms daily use of the space: more comfort, greater water efficiency and a real increase in the property\'s value. At Tacto we design every bathroom from scratch — flush-to-floor showers, bespoke screens, built-in furniture and continuous microcement finishes — with deadlines met and no endless works.',
+    'reno-eyebrow':'Solid wood &amp; noble materials','reno-title':'Wood as the<br>guiding thread',
+    'reno-desc':'Solid wood vanity unit, wooden framed mirror, bespoke lattices and panels — the carpentry structures the space without overloading it. Each piece is designed to dialogue with the tiles, the render and the metal.',
+    'reno-aside-title':'<strong style="color:var(--fg);font-weight:500;font-style:normal">Chalet — Full renovation</strong>',
+    'reno-aside-desc':'Complete rehabilitation of a timber chalet: open kitchen with black lacquered units and slate worktop, LED lighting and artisan pendant lamps, restored solid pine floors. Carpentry, lighting and finishes coordinated in one single project.',
+    'ext-eyebrow':'Pools &amp; Exteriors · Tacto','ext-aside-eyebrow':'Pools &amp; Exteriors · Tacto',
+    'ext-hero-title':'Pools and exteriors with <em style="font-style:italic;color:var(--terra)">total finish</em>',
+    'ext-hero-desc':'We renovate pools, renew cladding and install salt water treatment systems — gentler, more economical than chlorine — and design terraces, porches and gardens that extend the interior with visual coherence.',
+    'ext-aside-title':'From chlorine to salt, and much <em style="font-style:italic;color:var(--terra)">more</em>',
+    'ext-p1':'One of the most requested improvements is the <strong style="color:var(--fg);font-weight:500">conversion from chlorine to salt</strong>: we install the salt chlorinator, adjust the filtration and check the electronics. Water with no irritation, no smell and much lower annual maintenance. Compatible with any existing pool.',
+    'ext-p2':'For renovations we design the complete cladding — tesserae, projected microcement, artisan tiles or natural stone — with LED underwater lighting and integrated pump room. Terraces and porches in the same materials as the interior, seamlessly.',
+    'ext-list':'<li>Chlorine-to-salt conversion — salt chlorinator &amp; full installation</li><li>Pool basin renovation and cladding renewal</li><li>Overflow, skimmer or natural pools</li><li>Terraces in natural stone, clay or exterior microcement</li><li>Porches and pergolas in treated wood</li><li>Exterior LED and underwater lighting</li><li>Turnkey full project, fixed price</li>',
+    'qh-eyebrow':'Our crafts','qh-title':'What we do',
+    'card-01-title':'Bathroom renovation','card-01-desc':'From bath to flush-to-floor shower. Plumbing, waterproofing and cladding with microcement or ceramics. Turnkey.',
+    'card-02-title':'Kitchen renovation','card-02-desc':'Islands, worktops, counters and built-in units. No joints, no handles, tailored to your home\'s actual space.',
+    'card-03-title':'Microcement','card-03-desc':'Continuous floors, walls, stairs and worktops. Hand-finished: tadelakt, lime plasters and textured reliefs.',
+    'card-04-title':'Bespoke carpentry','card-04-desc':'Structure, cladding and hand-carved joinery. Tailored to every gap, no catalogue: everything made for your space.',
+    'card-05-title':'Lighting &amp; Home automation','card-05-desc':'LED lighting design, blind automation, climate control and security. Your home, controlled from your phone with real energy efficiency.',
+    'card-06-title':'Full renovation','card-06-desc':'We transform complete homes turnkey: design, permits, execution and handover. One single point of contact, zero budget surprises.',
+    'card-07-title':'Pools &amp; Exteriors','card-07-desc':'Pool renovation, terraces, porches, exterior paving and gardens. Weather-resistant materials with interior-grade finishes.',
+    'card-08-title':'Interior design &amp; Decoration','card-08-desc':'Interior design, material selection, furniture and decoration. We coordinate the complete project so the final space has coherence, character and its own personality.',
+    'qs-label':'About us',
+    'qs-headline':'We design and build.<br>The same hand<br>does both.',
+    'qs-p1':'In a normal renovation, someone designs and someone else builds. When a wall is opened and something unexpected appears, the project is cut or stopped. Not here: the decision is made on site, material in hand, and the drawing adapts to what is there. That is why no two bathrooms or kitchens we make are alike, and why we do not work with furniture catalogues: <em>if it doesn\'t fit, we build it to measure.</em>',
+    'qs-p2':'We have worked with our hands for years, in new builds and in rehabilitation, and with crafts almost no one offers any more: artisan zellige, tadelakt, lime plasters, wood and plaster carving. We work in <em>Spanish, English and French.</em>',
+    'faq-title':'What people ask<br>before hiring us',
+    'faq-1-q':'How much does a bathroom renovation cost in Coín or Alhaurín el Grande?',
+    'faq-1-a':'A complete bathroom renovation in the Guadalhorce Valley typically ranges from €4,500 to €8,000 depending on size and finish. This includes demolition, plumbing, waterproofing, cladding and sanitary ware. Converting a bathtub to a flush-to-floor shower with microcement finish starts at around €4,500 for a 5–6 m² bathroom. A bespoke built-in unit, rather than a bought one, adds between €600 and €1,200 depending on the layout. Bathrooms requiring drain relocation cost more because they involve the drainage network. We always give a fixed written price before starting.',
+    'faq-2-q':'What is a built-in island or unit and why does it cost more?',
+    'faq-2-a':'It is a unit built on site with construction materials and then clad, rather than bought pre-assembled. It costs more in labour — between one and three weeks\' work — but has no joints where dirt accumulates, no handles or hinges that work loose, and it fits to the centimetre in the existing space, which is decisive in older homes where no wall is truly square. The corners are rounded by hand, so there are no edges that chip or catch. In return, it cannot be moved or repositioned: it is a permanent decision and worth drawing carefully first.',
+    'faq-3-q':'Can microcement be applied without removing the tiles?',
+    'faq-3-a':'Yes, and it is one of its great advantages: it is applied over the existing tiles without chipping, which eliminates rubble, noise and several days of work. But there are conditions. The tiles must be firmly bonded, with no hollow or loose pieces, and the substrate must be dry with no rising damp. Before applying anything we check piece by piece by tapping the surface, and we seal the joints so they do not show through the finish. If we detect damp or detached tiles, we say so and chip that area: applying microcement over a moving substrate guarantees cracking within months.',
+    'faq-4-q':'Does microcement crack or stain?',
+    'faq-4-a':'When properly applied, no. The problems you see online almost always come from three mistakes: poorly prepared substrate, reinforcement mesh omitted to save money, or insufficient sealing. Microcement is not waterproof on its own: the waterproofing comes from the membrane underneath, and the final polyurethane sealer is what prevents water and soap from penetrating. We apply between five and seven coats with mesh in all wet areas and two coats of sealer. Maintenance is neutral soap — no ammonia or acid cleaners, which attack the sealer. Every six or seven years it is worth refreshing the sealer, a one-day operation.',
+    'faq-5-q':'How long does it take to convert a bathtub to a shower?',
+    'faq-5-a':'Between 8 and 12 working days, and the bathroom is out of service for almost all of that time. The usual breakdown: two days demolition and rubble removal, two days plumbing and drainage, one day waterproofing, three or four days applying the cladding with drying time between coats, and one or two days fitting sanitary ware and sealing. Drying times cannot be rushed: that is where the work of anyone in a hurry goes wrong. If it is the only bathroom in the house, we plan to keep the water cut as short as possible and give advance notice of the critical days.',
+    'faq-6-q':'How much does it cost to convert a pool from chlorine to salt?',
+    'faq-6-a':'Converting a pool from chlorine to salt typically costs between €800 and €1,800, depending on the water volume and the condition of the existing filtration system. The price includes the salt chlorinator, electrical installation, dosage adjustment and commissioning. If the pump or switchboard needs upgrading the budget rises, but for most residential pools under 50 m³ the installation requires nothing beyond connecting the unit. Savings on chemicals recover the investment within two or three seasons: annual maintenance of a salt pool is 60–70 % lower than a chlorine pool. Water is also gentler on skin, does not fade swimwear and removes the characteristic smell. The system is compatible with any existing pool.',
+    'faq-7-q':'Can the pool cladding be renewed without demolishing the basin?',
+    'faq-7-a':'Yes, in most cases. If the basin is structurally sound — no active cracks or movement — the old cladding can be chipped or prepared as a substrate and the new material applied directly on top. The most common options are: new tesserae over existing (provided the substrate is bonded), waterproof projected microcement for pools, reinforced PVC liner or polyurethane paint for tighter budgets. The process takes between 5 and 10 days with the pool empty, plus two or three days to commission. What cannot be avoided is a full empty and the curing time of the new finish before refilling: trying to accelerate that phase is the main reason claddings fail in the first year.',
+    'faq-8-q':'What is the advantage of bespoke carpentry over catalogue furniture?',
+    'faq-8-a':'Bespoke carpentry adapts to the actual space, not the other way round. In older or renovated homes, where two parallel walls or perfect right angles are rare, catalogue furniture always leaves gaps, requires cutting or simply does not fit. A built-in unit or workshop-made carpentry for that exact recess occupies the entire available space, losing no centimetres and hiding nothing behind added skirting boards. The materials are also solid or high-density — compared with the standard MDF in most off-the-shelf furniture — which you notice in the feel, the weight of the doors and the durability. The cost is 30–80 % higher depending on the wood type and finish, but the service life is several times greater and the piece never goes out of style because it follows no catalogue trend.',
+    'faq-9-q':'Can I renovate the terrace and exterior at the same time as the interior?',
+    'faq-9-a':'It is the most efficient option. When interior and exterior are renovated in the same project, plumbing, electrical and drainage work is coordinated without having to open and close twice. The material palette is also established once: the kitchen microcement can continue as the exterior paving, the wardrobe wood can be repeated in the pergola, and the façade tones align with the interior. Doing the two phases separately forces finish decisions without seeing the whole, and the final result often has less coherence. A combined budget is also usually more economical than commissioning two separate works, because the fixed costs of mobilisation, scaffolding and waste management are shared.',
+    'faq-10-q':'Which areas do you cover?',
+    'faq-10-a':'We work in Málaga, Marbella, Fuengirola, Coín, Alhaurín el Grande, Alhaurín de la Torre, Cártama, Pizarra, Monda, Guaro and the rest of the Guadalhorce Valley. We work in Spanish, English and French.',
+    'contact-title':'Let\'s talk<br>about your project.',
+    'contact-sub':'We reply within 24 hours. Free quote, no obligation. We work in Spanish, English and French.',
+    'contact-wa':'WhatsApp us',
+  },
+  fr: {
+    'nav-quote':'Devis','nav-process':'Comment nous travaillons','nav-services':'Services','nav-contact':'Contact',
+    'hero-eyebrow':'Sans engagement · Réponse sous 24 heures',
+    'hero-title':'Rénovations<br>avec <em>du caractère.</em>',
+    'hero-desc':'Chez <strong>Tacto</strong> nous réalisons des <strong>rénovations complètes</strong>, salles de bain, cuisines, microciment, éclairage et domotique. Notre propre équipe, prix fixe dès le premier jour.',
+    'stat-years':'15 ans','stat-years-label':'D\'expérience','stat-team-label':'Notre propre équipe',
+    'bullet-1':'Visite technique gratuite à domicile','bullet-2':'Devis fixe, sans coûts cachés',
+    'bullet-3':'Sans sous-traitants — entièrement notre équipe','bullet-4':'Rénovation d\'appartements, maisons et locaux commerciaux',
+    'form-title':'Obtenez votre devis gratuit','form-name-label':'Nom','form-name-ph':'Votre nom complet',
+    'form-phone-label':'Téléphone','form-type-label':'Type de rénovation',
+    'form-select':'<option value="">Sélectionnez le type de rénovation</option><option>Rénovation intégrale</option><option>Rénovation de salle de bain</option><option>Rénovation de cuisine</option><option>Microciment et revêtements</option><option>Éclairage et domotique</option><option>Menuiserie sur mesure</option><option>Local commercial ou bureau</option><option>Autre</option>',
+    'form-msg-ph':'Mètres carrés, état actuel, matériaux qui vous intéressent...',
+    'form-btn':'Demander un devis — c\'est gratuit',
+    'form-legal':'En soumettant ce formulaire vous acceptez notre politique de confidentialité. Vos données ne seront pas partagées avec des tiers ni utilisées à des fins commerciales étrangères à votre demande.',
+    'form-sent':'Demande envoyée ! Nous vous contactons dans 24 h',
+    'steps-eyebrow':'Méthode','steps-title':'Votre rénovation en 4 étapes',
+    'steps-intro':'Un processus clair et transparent du premier contact jusqu\'à la remise des clés, sans surprises ni intermédiaires.',
+    'step1-title':'Parlez-nous de votre projet','step1-desc':'Remplissez le formulaire ou appelez-nous. Expliquez-nous ce que vous voulez rénover, la superficie et vos idées. Sous 24 heures nous confirmeons la disponibilité.',
+    'step2-title':'Visite technique','step2-desc':'Un technicien Tacto se déplace sur place, prend les mesures et évalue l\'état réel des travaux. La visite est entièrement gratuite et sans engagement.',
+    'step3-title':'Devis détaillé','step3-desc':'Vous recevez un devis fixe avec tous les postes détaillés : matériaux, main-d\'œuvre et délais. Sans petits caractères. C\'est vous qui décidez de la suite.',
+    'step4-title':'Les travaux commencent','step4-desc':'Notre équipe démarre à la date convenue. Nous vous tenons informé à chaque étape et gérons les incidents le jour même. Remise propre et ponctuelle.',
+    'sec1-title':'Microciment','sec2-title':'Salles de bain &amp; Cuisines','sec3-title':'Menuiserie','sec4-title':'Extérieurs &amp; Piscines',
+    'micro-eyebrow':'Tacto — Microciment et Rénovations',
+    'micro-title':'La matière<br>dans son<br><em>état pur</em>',
+    'micro-desc':'Un espace conçu autour du microciment : plan de travail, îlot monolithique, lavabo. Chaque surface polie à la main, chaque arrondi sculpté pour répondre à la lumière.',
+    'meta-finish-label':'Finition','meta-finish-val':'Microciment satiné','meta-tone-label':'Teinte','meta-tone-val':'Sable clair','meta-loc-label':'Lieu','meta-loc-val':'Résidence privée',
+    'micro-stmt-l':'Une surface qui vit avec la lumière.',
+    'micro-stmt-r':'Le microciment ne se fige pas : il capte la lumière du matin, change de teinte au fil des heures, porte l\'empreinte douce du temps. Ce projet explore sa plasticité — des bords arrondis à l\'îlot monolithique — en dialogue avec le bois brut et les carreaux de terre cuite.',
+    'shower-eyebrow':'Rénovation de salle de bain · Tacto',
+    'shower-title':'Rénovation de salle de bain <em style="font-style:italic;color:var(--terra)">intégrale</em> sur mesure',
+    'shower-desc':'Nous transformons les salles de bain clé en main : démolition, plomberie, imperméabilisation et finition finale. Spécialisés dans les douches italiennes à ras du sol, le microciment continu et les revêtements céramiques de haute qualité. Sans sous-traitants, prix fixe dès le premier jour.',
+    'shower-note':'Une <strong>rénovation de salle de bain</strong> bien exécutée transforme l\'usage quotidien de l\'espace : plus de confort, meilleure efficacité hydrique et augmentation réelle de la valeur du bien. Chez Tacto nous concevons chaque salle de bain de zéro — douches à ras du sol, parois sur mesure, meubles construits et finitions continues en microciment — dans les délais convenus et sans travaux interminables.',
+    'reno-eyebrow':'Bois massif &amp; matériaux nobles','reno-title':'Le bois comme<br>fil conducteur',
+    'reno-desc':'Meuble-lavabo en bois massif, miroir à cadre en bois, claustra et panneaux sur mesure — la menuiserie structure l\'espace sans le surcharger. Chaque pièce est pensée pour dialoguer avec les carreaux, l\'enduit et le métal.',
+    'reno-aside-title':'<strong style="color:var(--fg);font-weight:500;font-style:normal">Chalet — Rénovation intégrale</strong>',
+    'reno-aside-desc':'Réhabilitation complète d\'un chalet en bois : cuisine ouverte avec meubles laqués noirs et plan de travail en ardoise, éclairage LED et suspensions artisanales, sols en pin massif restaurés. Menuiserie, éclairage et finitions coordonnés en un seul projet.',
+    'ext-eyebrow':'Piscines &amp; Extérieurs · Tacto','ext-aside-eyebrow':'Piscines &amp; Extérieurs · Tacto',
+    'ext-hero-title':'Piscines et extérieurs avec <em style="font-style:italic;color:var(--terra)">finition totale</em>',
+    'ext-hero-desc':'Nous rénovons les piscines, renouvelons les revêtements et installons des systèmes de traitement de l\'eau au sel — plus doux, plus économique que le chlore — et concevons terrasses, porches et jardins qui prolongent l\'intérieur avec cohérence visuelle.',
+    'ext-aside-title':'Du chlore au sel, et bien <em style="font-style:italic;color:var(--terra)">plus encore</em>',
+    'ext-p1':'L\'une des améliorations les plus demandées est la <strong style="color:var(--fg);font-weight:500">conversion chlore-sel</strong> : nous installons le chlorateur salin, ajustons la filtration et vérifions l\'électronique. Une eau sans irritations, sans odeur et un entretien annuel beaucoup plus économique. Compatible avec toute piscine existante.',
+    'ext-p2':'Pour les rénovations, nous concevons le revêtement complet — grès, microciment projeté, carrelage artisanal ou pierre naturelle — avec éclairage LED subaquatique et local technique intégré. Terrasses et porches dans les mêmes matériaux que l\'intérieur, sans rupture.',
+    'ext-list':'<li>Conversion chlore-sel — chlorateur salin et installation complète</li><li>Réfection du bassin et renouvellement du revêtement</li><li>Piscines débordantes, à skimmer ou naturelles</li><li>Terrasses en pierre naturelle, terre cuite ou microciment extérieur</li><li>Porches et pergolas en bois traité</li><li>Éclairage LED extérieur et subaquatique</li><li>Projet clé en main à prix fixe</li>',
+    'qh-eyebrow':'Nos métiers','qh-title':'Ce que nous faisons',
+    'card-01-title':'Rénovation de salle de bain','card-01-desc':'De la baignoire à la douche à l\'italienne. Plomberie, imperméabilisation et revêtement en microciment ou céramique. Clé en main.',
+    'card-02-title':'Rénovation de cuisine','card-02-desc':'Îlots, plans de travail, crédences et meubles construits sur mesure. Sans joints, sans poignées, adaptés à l\'espace réel de votre logement.',
+    'card-03-title':'Microciment','card-03-desc':'Sols, murs, escaliers et plans continus. Finitions à la main : tadelakt, mortiers de chaux et reliefs texturés.',
+    'card-04-title':'Menuiserie sur mesure','card-04-desc':'Structure, revêtement et menuiserie sculptée à la main. Adaptée à chaque renfoncement, sans catalogue : tout fabriqué pour votre espace.',
+    'card-05-title':'Éclairage &amp; Domotique','card-05-desc':'Conception lumineuse LED, automatisation des volets, climatisation et sécurité. Votre maison, pilotée depuis votre téléphone avec une vraie efficacité énergétique.',
+    'card-06-title':'Rénovation intégrale','card-06-desc':'Nous transformons des logements complets clé en main : projet, permis, exécution et livraison. Un seul interlocuteur, zéro surprise budgétaire.',
+    'card-07-title':'Piscines &amp; Extérieurs','card-07-desc':'Rénovation de piscines, terrasses, porches, dallages extérieurs et jardins. Matériaux résistants aux intempéries avec des finitions dignes d\'un intérieur.',
+    'card-08-title':'Design d\'intérieur &amp; Décoration','card-08-desc':'Design d\'intérieur, sélection de matériaux, mobilier et décoration. Nous coordonnons le projet complet pour que l\'espace final soit cohérent, avec du caractère et une personnalité propre.',
+    'qs-label':'Qui sommes-nous',
+    'qs-headline':'Nous concevons et construisons.<br>La même main<br>fait les deux.',
+    'qs-p1':'Dans une rénovation ordinaire, quelqu\'un conçoit et quelqu\'un d\'autre exécute. Quand on ouvre un mur et qu\'on découvre quelque chose d\'imprévu, le projet est réduit ou stoppé. Pas ici : la décision se prend sur place, le matériau en main, et le plan s\'adapte à ce qu\'il y a. C\'est pourquoi aucune salle de bain et aucune cuisine que nous réalisons ne ressemble à une autre, et c\'est pourquoi nous ne travaillons pas avec des catalogues de meubles : <em>ce qui n\'entre pas, on le construit sur mesure.</em>',
+    'qs-p2':'Nous travaillons de nos mains depuis des années, en construction neuve et en réhabilitation, avec des métiers que presque plus personne ne propose : zellige artisanal, tadelakt, mortiers de chaux, sculpture sur bois et mortier. Nous travaillons en <em>espagnol, anglais et français.</em>',
+    'faq-title':'Ce qu\'on nous demande<br>avant de nous engager',
+    'faq-1-q':'Combien coûte la rénovation d\'une salle de bain à Coín ou Alhaurín el Grande ?',
+    'faq-1-a':'Une rénovation complète de salle de bain dans la vallée du Guadalhorce se situe généralement entre 4 500 € et 8 000 €, selon la taille et la finition. Cela inclut la démolition, la plomberie, l\'imperméabilisation, le revêtement et les sanitaires. Remplacer une baignoire par une douche à l\'italienne en microciment coûte environ 4 500 € pour une salle de bain de 5 à 6 m². Un meuble construit sur mesure au lieu d\'un meuble acheté ajoute entre 600 € et 1 200 € selon les développements. Les salles de bain nécessitant la dépose des évacuations coûtent plus cher car elles impliquent de toucher au réseau d\'assainissement. Nous donnons toujours un prix fixe par écrit avant de commencer.',
+    'faq-2-q':'Qu\'est-ce qu\'un îlot ou un meuble construit et pourquoi coûte-t-il plus cher ?',
+    'faq-2-a':'C\'est un meuble élevé sur place avec des matériaux de construction puis revêtu, au lieu d\'être acheté monté. Il coûte plus cher en main-d\'œuvre — entre une et trois semaines de travail — mais n\'a pas de joints où la saleté s\'accumule, pas de poignées ni de charnières qui se desserrent, et s\'adapte au centimètre à l\'espace existant, ce qui est décisif dans les maisons anciennes où aucun mur n\'est à l\'équerre. Les angles sont arrondis à la main, donc pas de bords qui s\'écaillent. En contrepartie, il ne peut pas être déplacé : c\'est une décision permanente qu\'il vaut mieux bien dessiner avant.',
+    'faq-3-q':'Peut-on appliquer le microciment sans enlever le carrelage ?',
+    'faq-3-a':'Oui, et c\'est l\'un de ses grands avantages : il s\'applique sur le carrelage existant sans démolition, ce qui élimine les gravats, le bruit et plusieurs jours de chantier. Mais il y a des conditions. Le carrelage doit être bien adhérent, sans pièces creuses ni décollées, et le support sec sans remontées capillaires. Avant toute application, nous vérifions pièce par pièce en tapant la surface, et nous scellons les joints pour qu\'ils ne se marquent pas à travers la finition. Si nous détectons de l\'humidité ou du carrelage décollé, nous le signalons et piquons cette zone : appliquer du microciment sur un support qui bouge garantit des fissures en quelques mois.',
+    'faq-4-q':'Le microciment se fissure-t-il ou se tache-t-il ?',
+    'faq-4-a':'Bien appliqué, non. Les problèmes que l\'on voit sur internet viennent presque toujours de trois erreurs : support mal préparé, treillis de renforcement omis pour économiser, ou scellement insuffisant. Le microciment n\'est pas imperméable par lui-même : l\'étanchéité est apportée par la membrane en dessous, et le scellant polyuréthane de la couche finale est ce qui empêche l\'eau et le savon de pénétrer. Nous appliquons entre cinq et sept couches avec treillis dans toute la zone humide et deux mains de scellant. L\'entretien se fait au savon neutre — pas d\'ammoniaque ni de nettoyants acides, qui attaquent le scellant. Tous les six ou sept ans il convient de rafraîchir le scellant, une opération d\'une journée.',
+    'faq-5-q':'Combien de temps faut-il pour remplacer la baignoire par une douche ?',
+    'faq-5-a':'Entre 8 et 12 jours ouvrables, et la salle de bain est hors service pendant presque toute cette période. Le découpage habituel : deux jours de démolition et évacuation des gravats, deux de plomberie et assainissement, un d\'imperméabilisation, trois ou quatre d\'application du revêtement avec les temps de séchage entre les couches, et un ou deux de pose des sanitaires et joints. Les temps de séchage ne peuvent pas être accélérés : c\'est là que le travail de ceux qui sont pressés se détériore. Si c\'est la seule salle de bain de la maison, nous planifions la coupure d\'eau au minimum et prévenons à l\'avance des jours critiques.',
+    'faq-6-q':'Combien coûte la conversion d\'une piscine du chlore au sel ?',
+    'faq-6-a':'La conversion d\'une piscine du chlore au sel coûte habituellement entre 800 € et 1 800 €, selon le volume d\'eau et l\'état du système de filtration existant. Le prix comprend le chlorateur salin, l\'installation électrique, le réglage du doseur et la mise en service. Si la pompe ou le tableau électrique nécessitent une mise à jour, le devis augmente, mais pour la plupart des piscines résidentielles de moins de 50 m³ l\'installation ne demande rien de plus que de brancher l\'appareil. Les économies sur les produits chimiques récupèrent l\'investissement en deux ou trois saisons : le coût annuel d\'entretien d\'une piscine au sel est inférieur de 60 à 70 % à celui d\'une piscine au chlore. L\'eau est aussi plus douce pour la peau, ne décolore pas les maillots et élimine l\'odeur caractéristique. Le système est compatible avec toute piscine déjà construite.',
+    'faq-7-q':'Peut-on rénover le revêtement de la piscine sans démolir le bassin ?',
+    'faq-7-a':'Oui, dans la plupart des cas. Si le bassin est structurellement sain — sans fissures actives ni mouvement — l\'ancien revêtement peut être piqué ou préparé comme support et le nouveau matériau appliqué directement dessus. Les options les plus courantes sont : grès sur grès existant (à condition que le support soit adhérent), microciment projeté hydrofuge pour piscines, liner PVC armé ou peinture polyuréthane pour les budgets plus serrés. Le processus prend entre 5 et 10 jours piscine vidée, plus deux ou trois jours de mise en service. Ce qu\'on ne peut éviter, c\'est la vidange totale et le temps de séchage du nouveau revêtement avant remplissage : accélérer cette phase est la principale cause d\'échec des revêtements dès la première année.',
+    'faq-8-q':'Quel est l\'avantage de la menuiserie sur mesure par rapport aux meubles de catalogue ?',
+    'faq-8-a':'La menuiserie sur mesure s\'adapte à l\'espace réel, pas l\'inverse. Dans les maisons anciennes ou rénovées, où deux murs parallèles ou des angles parfaits sont rares, un meuble de catalogue laisse toujours des espaces, nécessite des découpes ou simplement ne rentre pas. Le meuble construit ou la menuiserie fabriquée en atelier pour cette niche précise occupe exactement l\'espace disponible, sans perdre de centimètres ni dissimuler quoi que ce soit avec des plinthes ajoutées. Les matériaux sont également massifs ou haute densité — face à l\'aggloméré standard de la plupart des meubles de série — ce qui se ressent au toucher, au poids des portes et à la durabilité. Le coût est de 30 à 80 % plus élevé selon le bois et la finition, mais la durée de vie est bien supérieure et la pièce ne se démode pas car elle ne suit aucune tendance de catalogue.',
+    'faq-9-q':'Puis-je rénover la terrasse et l\'extérieur en même temps que l\'intérieur ?',
+    'faq-9-a':'C\'est l\'option la plus efficace. Quand intérieur et extérieur sont rénovés dans le même projet, le travail de plomberie, électricité et assainissement est coordonné sans avoir à ouvrir et fermer deux fois. Le choix des matériaux s\'établit aussi une seule fois : le microciment de la cuisine peut se prolonger comme revêtement de sol extérieur, le bois des armoires peut être répété dans la pergola, et les teintes de la façade s\'alignent avec l\'intérieur. Faire les deux phases séparément oblige à prendre des décisions de finition sans voir l\'ensemble, et le résultat final a souvent moins de cohérence. Le budget global est aussi généralement plus économique que deux chantiers séparés, car les coûts fixes de mobilisation, échafaudages et gestion des déchets sont partagés.',
+    'faq-10-q':'Dans quelles zones intervenez-vous ?',
+    'faq-10-a':'Nous intervenons à Málaga, Marbella, Fuengirola, Coín, Alhaurín el Grande, Alhaurín de la Torre, Cártama, Pizarra, Monda, Guaro et dans le reste de la vallée du Guadalhorce. Nous travaillons en espagnol, anglais et français.',
+    'contact-title':'Parlons<br>de votre projet.',
+    'contact-sub':'Nous répondons dans les 24 heures. Devis gratuit et sans engagement. Nous travaillons en espagnol, anglais et français.',
+    'contact-wa':'Écrivez-nous sur WhatsApp',
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('tacto-lang', lang); } catch(e){}
+  // innerHTML elements
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.dataset.i18nHtml;
+    if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  // placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const k = el.dataset.i18nPlaceholder;
+    if (T[lang] && T[lang][k] !== undefined) el.placeholder = T[lang][k];
+  });
+  // select innerHTML
+  document.querySelectorAll('[data-i18n-select]').forEach(el => {
+    const k = el.dataset.i18nSelect;
+    if (T[lang] && T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  // active button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  // reset form sent state message if language changes
+  const btn = document.getElementById('presup-btn');
+  if (btn && btn.classList.contains('sent')) {
+    btn.innerHTML = T[lang]['form-btn'] || T['es']['form-btn'];
+  }
+}
+
+(function init() {
+  let saved = 'es';
+  try { saved = localStorage.getItem('tacto-lang') || 'es'; } catch(e){}
+  if (saved !== 'es') {
+    setLang(saved);
+  } else {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === 'es');
+    });
+  }
+})();
+
+// Patch handlePresupForm — envio real via Formspree
+window.handlePresupForm = function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('presup-btn');
+  const lang = document.documentElement.lang || 'es';
+  const okMsg = (T[lang] && T[lang]['form-sent']) || T['es']['form-sent'];
+  const prev = btn.innerHTML;
+  const fail = function(msg){ btn.disabled = false; btn.innerHTML = prev; alert(msg); };
+  btn.disabled = true;
+  btn.innerHTML = '\u2026';
+  fetch('https://formspree.io/f/xoeqwzdw', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      Nombre: (document.getElementById('pf-name') || {}).value || '',
+      Telefono: (document.getElementById('pf-phone') || {}).value || '',
+      'Tipo de reforma': (document.getElementById('pf-type') || {}).value || '',
+      Mensaje: (document.getElementById('pf-msg') || {}).value || '',
+      _subject: 'Nueva solicitud de presupuesto \u2014 tactoreformas.com'
+    })
+  }).then(function(r){
+    if (r.ok) { btn.innerHTML = okMsg; btn.classList.add('sent'); }
+    else { fail('No se pudo enviar. Escribenos a info@tactoreformas.com'); }
+  }).catch(function(){
+    fail('Error de conexion. Escribenos a info@tactoreformas.com');
+  });
+};
+</script>
+
+</body></html>
